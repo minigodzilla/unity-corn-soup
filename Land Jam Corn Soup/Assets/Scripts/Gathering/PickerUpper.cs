@@ -13,6 +13,10 @@ public class PickerUpper : MonoBehaviour
 
     private Collectable ingredientInView = null;
 
+    public bool hasAllVitalIngredients = false;
+    public bool hasStrawberry = false;
+    public bool hasFreshCornOrBeans = false;
+
     private void Awake()
     {
         cameraTransform = Camera.main.transform;
@@ -78,5 +82,29 @@ public class PickerUpper : MonoBehaviour
         }
 
         print(message);
+
+        CheckIfHasAllIngredients();
+    }
+
+    private void CheckIfHasAllIngredients()
+    {
+        if (ingredientsInInventory.Contains(Collectable.IngredientType.ash)
+            && ingredientsInInventory.Contains(Collectable.IngredientType.driedBeans)
+            && ingredientsInInventory.Contains(Collectable.IngredientType.driedCorn)
+            && ingredientsInInventory.Contains(Collectable.IngredientType.venison)
+            && ingredientsInInventory.Contains(Collectable.IngredientType.recipeBook)
+            )
+        {
+            hasAllVitalIngredients = true;
+        }
+
+        if (ingredientsInInventory.Contains(Collectable.IngredientType.strawberry))
+        {
+            hasStrawberry = true;
+        }
+        if (ingredientsInInventory.Contains(Collectable.IngredientType.freshCorn) || ingredientsInInventory.Contains(Collectable.IngredientType.freshBeans))
+        {
+            hasFreshCornOrBeans = true;
+        }
     }
 }

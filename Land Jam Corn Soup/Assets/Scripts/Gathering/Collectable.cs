@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    public enum IngredientType { strawberry, beans, corn, squash, venison };
+    public enum IngredientType { strawberry, freshBeans, freshCorn, driedBeans, driedCorn, venison, recipeBook, ash };
 
     public IngredientType type;
     public Material highlightMaterial;

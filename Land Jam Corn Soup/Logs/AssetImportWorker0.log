@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-D:/Users/Nathan/Documents/_Cül/Personal Projects/Land Jam 2022/Corn Soup Repo/unity-land-jam-seasons/Land Jam Corn Soup
+F:/Land Jam (ext. drive)/unity-land-jam-seasons/Land Jam Corn Soup
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62536
-Successfully changed project path to: D:/Users/Nathan/Documents/_Cül/Personal Projects/Land Jam 2022/Corn Soup Repo/unity-land-jam-seasons/Land Jam Corn Soup
-D:/Users/Nathan/Documents/_Cül/Personal Projects/Land Jam 2022/Corn Soup Repo/unity-land-jam-seasons/Land Jam Corn Soup
+57962
+Successfully changed project path to: F:/Land Jam (ext. drive)/unity-land-jam-seasons/Land Jam Corn Soup
+F:/Land Jam (ext. drive)/unity-land-jam-seasons/Land Jam Corn Soup
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,11 +47,11 @@ D:/Users/Nathan/Documents/_Cül/Personal Projects/Land Jam 2022/Corn Soup Repo/u
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 154.19 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 131.87 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.5f1 (40eb3a945986)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.5f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Users/Nathan/Documents/_Cül/Personal Projects/Land Jam 2022/Corn Soup Repo/unity-land-jam-seasons/Land Jam Corn Soup/Assets
+[Subsystems] Discovering subsystems at path F:/Land Jam (ext. drive)/unity-land-jam-seasons/Land Jam Corn Soup/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -63,82 +63,82 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56972
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56940
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.5f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.010148 seconds.
+Registered in 0.009705 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 148.37 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 131.04 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.705 seconds
+- Completed reload, in  0.624 seconds
 Domain Reload Profiling:
-	ReloadAssembly (706ms)
-		BeginReloadAssembly (70ms)
+	ReloadAssembly (624ms)
+		BeginReloadAssembly (62ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (515ms)
-			LoadAssemblies (67ms)
+		EndReloadAssembly (460ms)
+			LoadAssemblies (60ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (103ms)
+			SetupTypeCache (89ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (28ms)
-			SetupLoadedEditorAssemblies (334ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (296ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
+				InitializePlatformSupportModulesInManaged (12ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (148ms)
+				RefreshPlugins (131ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (127ms)
-				ProcessInitializeOnLoadMethodAttributes (43ms)
+				ProcessInitializeOnLoadAttributes (116ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.010825 seconds.
+Registered in 0.010222 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Users\Nathan\Documents\_Cül\Personal Projects\Land Jam 2022\Corn Soup Repo\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Users\Nathan\Documents\_Cül\Personal Projects\Land Jam 2022\Corn Soup Repo\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 155.11 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 149.20 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.932 seconds
+- Completed reload, in  1.838 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1933ms)
-		BeginReloadAssembly (109ms)
+	ReloadAssembly (1839ms)
+		BeginReloadAssembly (111ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (1710ms)
-			LoadAssemblies (102ms)
+		EndReloadAssembly (1617ms)
+			LoadAssemblies (95ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (343ms)
+			SetupTypeCache (340ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (144ms)
-			SetupLoadedEditorAssemblies (1073ms)
+			RebuildScriptCaches (112ms)
+			SetupLoadedEditorAssemblies (1030ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (155ms)
-				BeforeProcessingInitializeOnLoad (153ms)
-				ProcessInitializeOnLoadAttributes (578ms)
-				ProcessInitializeOnLoadMethodAttributes (167ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				RefreshPlugins (149ms)
+				BeforeProcessingInitializeOnLoad (148ms)
+				ProcessInitializeOnLoadAttributes (559ms)
+				ProcessInitializeOnLoadMethodAttributes (153ms)
+				AfterProcessingInitializeOnLoad (10ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (5ms)
@@ -146,12 +146,12 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 1.28 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.25 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 7149 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 97 unused Assets / (5.0 MB). Loaded Objects now: 7654.
-Memory consumption went from 340.1 MB to 335.1 MB.
-Total: 5.407400 ms (FindLiveObjects: 0.746200 ms CreateObjectMapping: 0.224500 ms MarkObjects: 3.246100 ms  DeleteObjects: 1.189300 ms)
+Unloading 7148 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 97 unused Assets / (5.0 MB). Loaded Objects now: 7641.
+Memory consumption went from 327.4 MB to 322.4 MB.
+Total: 5.184000 ms (FindLiveObjects: 0.681300 ms CreateObjectMapping: 0.205200 ms MarkObjects: 3.189500 ms  DeleteObjects: 1.107300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -165,43 +165,959 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 61597.254389 seconds.
-  path: Assets/Textures/Foliage/TexturesCom_Grass11_512_albedo.png
-  artifactKey: Guid(c00dc6bf20e35964ea0b9f84999ddf7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Foliage/TexturesCom_Grass11_512_albedo.png using Guid(c00dc6bf20e35964ea0b9f84999ddf7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff93e6e26c03226f5ffc429b85a6a8f7') in 0.074231 seconds 
+  Time since last request: 5008.186847 seconds.
+  path: Assets/Textures/Ground
+  artifactKey: Guid(a4a9b9b673897f14b84a0b7805d6280a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Ground using Guid(a4a9b9b673897f14b84a0b7805d6280a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a446eb801f9a8fd60f9773aeac86e59') in 0.017464 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.287520 seconds.
-  path: Assets/Textures/Foliage/TexturesCom_Grass11_512_albedo 1.png
-  artifactKey: Guid(944f08e07f8be7747ac5d9c0ff16bf07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Foliage/TexturesCom_Grass11_512_albedo 1.png using Guid(944f08e07f8be7747ac5d9c0ff16bf07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2db780243481a8400ccda6fce3a9da96') in 0.013082 seconds 
+  Time since last request: 23.910371 seconds.
+  path: Assets/Textures/Ground/TexturesCom_Road_Asphalt2_8x7.5_1K_albedo.tif
+  artifactKey: Guid(5a4b3486e1f26054185381d259d6143e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Ground/TexturesCom_Road_Asphalt2_8x7.5_1K_albedo.tif using Guid(5a4b3486e1f26054185381d259d6143e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a383ec23df2c6d1c32193f4ad942d07') in 0.068488 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.161555 seconds.
-  path: Assets/Textures/Foliage/Grass Texture.png
-  artifactKey: Guid(944f08e07f8be7747ac5d9c0ff16bf07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Foliage/Grass Texture.png using Guid(944f08e07f8be7747ac5d9c0ff16bf07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a97189300bb6f78e14e4706458bcee0') in 0.012939 seconds 
+  Time since last request: 3.767781 seconds.
+  path: Assets/road.terrainlayer
+  artifactKey: Guid(ba56370988ebb154d824a78c9432c8f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/road.terrainlayer using Guid(ba56370988ebb154d824a78c9432c8f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63c4df1f9a97000ffd3c0d27877bfe27') in 0.036376 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 36.202127 seconds.
-  path: Assets/Prefabs/Environment/Foliage/Grass.prefab
-  artifactKey: Guid(d7f7efbfdf085944b8dd43d0c5a74e63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Environment/Foliage/Grass.prefab using Guid(d7f7efbfdf085944b8dd43d0c5a74e63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0378fe0990ceca25f29fa6cea4136cc6') in 0.666493 seconds 
+  Time since last request: 4.666280 seconds.
+  path: Assets/Textures/Ground/TexturesCom_Road_Asphalt2_8x7.5_1K_normal.tif
+  artifactKey: Guid(1e08fa5e91e1b7d4791ad0d2ee949a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Ground/TexturesCom_Road_Asphalt2_8x7.5_1K_normal.tif using Guid(1e08fa5e91e1b7d4791ad0d2ee949a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bd50f2686b8ba44c021a3c5c41c4821') in 0.012462 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.244465 seconds.
-  path: Assets/Prefabs/Environment/Foliage/Grass 1.prefab
-  artifactKey: Guid(ca36db4d2ed8fb94784963fdb6d0e0c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Environment/Foliage/Grass 1.prefab using Guid(ca36db4d2ed8fb94784963fdb6d0e0c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b16f20d8fd0d49a914723339fad6d41') in 0.027470 seconds 
+  Time since last request: 7.310396 seconds.
+  path: Assets/Textures/Ground/TexturesCom_Road_Asphalt2_8x7.5_1K_normal.tif
+  artifactKey: Guid(1e08fa5e91e1b7d4791ad0d2ee949a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Ground/TexturesCom_Road_Asphalt2_8x7.5_1K_normal.tif using Guid(1e08fa5e91e1b7d4791ad0d2ee949a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ece76e080d429f2f87d21c391df9826a') in 0.020810 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.810760 seconds.
-  path: Assets/Prefabs/Environment/Foliage/Detail Grass.prefab
-  artifactKey: Guid(ca36db4d2ed8fb94784963fdb6d0e0c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Environment/Foliage/Detail Grass.prefab using Guid(ca36db4d2ed8fb94784963fdb6d0e0c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e686f575a8a9d20a4586ab27493aac9c') in 0.018901 seconds 
+  Time since last request: 179.406032 seconds.
+  path: Assets/Textures/Ground/TexturesCom_Ground_PineNeedles_2x2_1K_normal.tif
+  artifactKey: Guid(31261917677d11146a59b5761a290647) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Ground/TexturesCom_Ground_PineNeedles_2x2_1K_normal.tif using Guid(31261917677d11146a59b5761a290647) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d1bb30450606ff460253478e98e96b6') in 0.030074 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 427.210979 seconds.
-  path: Assets/Textures/Ground/NewLayer 2.terrainlayer
-  artifactKey: Guid(4c36dba86117d954697d2548cf2d165e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Ground/NewLayer 2.terrainlayer using Guid(4c36dba86117d954697d2548cf2d165e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd289e320e8e37e972d55f46f4a7f0f20') in 0.018664 seconds 
+  Time since last request: 4.676958 seconds.
+  path: Assets/Textures/Ground/TexturesCom_Ground_PineNeedles_2x2_1K_albedo.tif
+  artifactKey: Guid(cb1d21602d5cfab438156b7cff09ea89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Ground/TexturesCom_Ground_PineNeedles_2x2_1K_albedo.tif using Guid(cb1d21602d5cfab438156b7cff09ea89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b85c3fa5e668f29290302262e0dfade0') in 0.011610 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.580613 seconds.
+  path: Assets/dirt.terrainlayer
+  artifactKey: Guid(53547f7dfe53b3243aa8ca8148640f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/dirt.terrainlayer using Guid(53547f7dfe53b3243aa8ca8148640f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bc8b55e9bc33543b1d7ccf895c53b3d') in 0.012319 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.728316 seconds.
+  path: Assets/Textures/Ground/TexturesCom_Ground_PineNeedles_2x2_1K_normal.tif
+  artifactKey: Guid(31261917677d11146a59b5761a290647) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Ground/TexturesCom_Ground_PineNeedles_2x2_1K_normal.tif using Guid(31261917677d11146a59b5761a290647) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3c9fdfb1766a2eefb521204897bf916') in 0.017423 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 263.228749 seconds.
+  path: Assets/Textures/Ground/TexturesCom_Ground_RockBedSandstone_2x2_1K_albedo.tif
+  artifactKey: Guid(8cd21ebd47ad41546b8faa201e9c1c10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Ground/TexturesCom_Ground_RockBedSandstone_2x2_1K_albedo.tif using Guid(8cd21ebd47ad41546b8faa201e9c1c10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4d75253e140891e20b6f383fd4d6bc5') in 0.013558 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.330405 seconds.
+  path: Assets/gravel.terrainlayer
+  artifactKey: Guid(d9c28e3040797b14781d9b5e42419428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/gravel.terrainlayer using Guid(d9c28e3040797b14781d9b5e42419428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f40057f4f01680a1f9c35a2a6b26b91d') in 0.012202 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.130223 seconds.
+  path: Assets/Textures/Ground/TexturesCom_Ground_RockBedSandstone_2x2_1K_normal.tif
+  artifactKey: Guid(d390dc95f98180b4f921b06e53bdcef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Ground/TexturesCom_Ground_RockBedSandstone_2x2_1K_normal.tif using Guid(d390dc95f98180b4f921b06e53bdcef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40983d18c63f73502f2cbcc27e536aa1') in 0.029763 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.978534 seconds.
+  path: Assets/Textures/Ground/TexturesCom_Ground_RockBedSandstone_2x2_1K_normal.tif
+  artifactKey: Guid(d390dc95f98180b4f921b06e53bdcef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Ground/TexturesCom_Ground_RockBedSandstone_2x2_1K_normal.tif using Guid(d390dc95f98180b4f921b06e53bdcef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d7f44d2123e3d83d3e02c91b9ec353b') in 0.014294 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.731648 seconds.
+  path: Assets/gravel.terrainlayer
+  artifactKey: Guid(d9c28e3040797b14781d9b5e42419428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/gravel.terrainlayer using Guid(d9c28e3040797b14781d9b5e42419428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '958097cd3d1c84dacd5f466ecd462774') in 0.013999 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 323.256036 seconds.
+  path: Assets/Textures/Ground/Ground_Grass_001_COLOR.jpg
+  artifactKey: Guid(99a3e489b214bb543b18d8a74412bbd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Ground/Ground_Grass_001_COLOR.jpg using Guid(99a3e489b214bb543b18d8a74412bbd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd1c52ee80f22daea5a95ed8b36d2664') in 0.024730 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.705317 seconds.
+  path: Assets/Textures/Ground/Ground_Grass_001_NORM.jpg
+  artifactKey: Guid(2750b739647c15644bbe16534936a4c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Ground/Ground_Grass_001_NORM.jpg using Guid(2750b739647c15644bbe16534936a4c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b75738889b8cbc3dc6640f291556daad') in 0.014826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.028132 seconds.
+  path: Assets/Textures/Ground/TexturesCom_Ground_RockBedSandstone_2x2_1K_albedo.tif
+  artifactKey: Guid(8cd21ebd47ad41546b8faa201e9c1c10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Ground/TexturesCom_Ground_RockBedSandstone_2x2_1K_albedo.tif using Guid(8cd21ebd47ad41546b8faa201e9c1c10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '238673508123467a64c15ab8dd2a44b6') in 0.013048 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.315341 seconds.
+  path: Assets/suntouched grass.terrainlayer
+  artifactKey: Guid(6e1846c2190c0c94ca1e67123c024b96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/suntouched grass.terrainlayer using Guid(6e1846c2190c0c94ca1e67123c024b96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eacd6d2185939900bfa13d06432cf58') in 0.013304 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.229284 seconds.
+  path: Assets/Textures/Ground/Ground_Grass_001_NORM.jpg
+  artifactKey: Guid(2750b739647c15644bbe16534936a4c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Ground/Ground_Grass_001_NORM.jpg using Guid(2750b739647c15644bbe16534936a4c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7a92dd7c1fd31534e2a7a650da38700') in 0.018378 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 87.380242 seconds.
+  path: Assets/suntouched grass.terrainlayer
+  artifactKey: Guid(6e1846c2190c0c94ca1e67123c024b96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/suntouched grass.terrainlayer using Guid(6e1846c2190c0c94ca1e67123c024b96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48874c0b92b738d59b14e27fa73f50ac') in 0.014217 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 155.519083 seconds.
+  path: Assets/Prefabs/Collectables
+  artifactKey: Guid(f21fcad4855e65f409d6f0af0577a8d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Collectables using Guid(f21fcad4855e65f409d6f0af0577a8d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3189a96bf85270ab03e9a8e3e5bf6a3') in 0.347992 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009712 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.478 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1479ms)
+		BeginReloadAssembly (148ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (52ms)
+		EndReloadAssembly (1236ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (309ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (87ms)
+			SetupLoadedEditorAssemblies (658ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (108ms)
+				ProcessInitializeOnLoadAttributes (488ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6782 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 66 unused Assets / (4.9 MB). Loaded Objects now: 7663.
+Memory consumption went from 310.5 MB to 305.6 MB.
+Total: 4.898700 ms (FindLiveObjects: 0.526500 ms CreateObjectMapping: 0.177200 ms MarkObjects: 3.243800 ms  DeleteObjects: 0.950000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010088 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.434 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1435ms)
+		BeginReloadAssembly (146ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (1189ms)
+			LoadAssemblies (88ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (310ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (83ms)
+			SetupLoadedEditorAssemblies (623ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (105ms)
+				ProcessInitializeOnLoadAttributes (464ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.30 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6782 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 66 unused Assets / (4.9 MB). Loaded Objects now: 7678.
+Memory consumption went from 310.6 MB to 305.6 MB.
+Total: 5.115500 ms (FindLiveObjects: 0.841800 ms CreateObjectMapping: 0.292300 ms MarkObjects: 3.036400 ms  DeleteObjects: 0.943600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 453.698086 seconds.
+  path: Assets/Prefabs/Collectables/Recipe Book Variant.prefab
+  artifactKey: Guid(b275c90d16492754a8db3a19543be3d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Collectables/Recipe Book Variant.prefab using Guid(b275c90d16492754a8db3a19543be3d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9ae637a12c6a5d48ec011c8f57b5a08') in 0.944422 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.820062 seconds.
+  path: Assets/Prefabs/Collectables/Dried Corn Variant.prefab
+  artifactKey: Guid(28bda910618f97d4d9008f2b7ade9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Collectables/Dried Corn Variant.prefab using Guid(28bda910618f97d4d9008f2b7ade9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2a4cb794e34e8efd74ca9ed1753a9c0') in 0.020637 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.274424 seconds.
+  path: Assets/Prefabs/Collectables/Dried Beans Variant.prefab
+  artifactKey: Guid(a30c3c467f4f24d4fb2424edcc412386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Collectables/Dried Beans Variant.prefab using Guid(a30c3c467f4f24d4fb2424edcc412386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '952e8a52b42279b6ad7accd50d9dabd7') in 0.020089 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.648044 seconds.
+  path: Assets/Prefabs/Collectables/Fresh Beans Variant.prefab
+  artifactKey: Guid(60228ddb9909c7c44a7f634eea9c63cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Collectables/Fresh Beans Variant.prefab using Guid(60228ddb9909c7c44a7f634eea9c63cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc788ee2cc58c934e84c2065318f0b81') in 0.022973 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.635395 seconds.
+  path: Assets/Prefabs/Collectables/Fresh Corn Variant.prefab
+  artifactKey: Guid(95fb37e3dcd722149a130dd9e78a06ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Collectables/Fresh Corn Variant.prefab using Guid(95fb37e3dcd722149a130dd9e78a06ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f7d0d1a64c7b3500bfd25e0506fe186') in 0.024484 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.233782 seconds.
+  path: Assets/Prefabs/Collectables/Ash Variant.prefab
+  artifactKey: Guid(699ebe088db2d0e48a8fd0b55e55a544) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Collectables/Ash Variant.prefab using Guid(699ebe088db2d0e48a8fd0b55e55a544) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd03e1f9b8bfe60fd3587b424864771c0') in 0.036047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 32.942016 seconds.
+  path: Assets/Prefabs/Collectables/Venison Variant.prefab
+  artifactKey: Guid(e00e6e41126b1474cb9167e5541fa466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Collectables/Venison Variant.prefab using Guid(e00e6e41126b1474cb9167e5541fa466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6715636d0fc1223f10f8ea12bc007a6') in 0.018952 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009906 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.31 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.567 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1568ms)
+		BeginReloadAssembly (192ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (34ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (60ms)
+		EndReloadAssembly (1287ms)
+			LoadAssemblies (88ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (310ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (92ms)
+			SetupLoadedEditorAssemblies (681ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (111ms)
+				ProcessInitializeOnLoadAttributes (501ms)
+				ProcessInitializeOnLoadMethodAttributes (43ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6783 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (5.0 MB). Loaded Objects now: 7810.
+Memory consumption went from 313.7 MB to 308.7 MB.
+Total: 5.208800 ms (FindLiveObjects: 0.554300 ms CreateObjectMapping: 0.181600 ms MarkObjects: 3.521500 ms  DeleteObjects: 0.950100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009749 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.468 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1469ms)
+		BeginReloadAssembly (160ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (56ms)
+		EndReloadAssembly (1211ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (299ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (81ms)
+			SetupLoadedEditorAssemblies (636ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (106ms)
+				ProcessInitializeOnLoadAttributes (475ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6783 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 66 unused Assets / (4.9 MB). Loaded Objects now: 7825.
+Memory consumption went from 313.4 MB to 308.5 MB.
+Total: 4.521900 ms (FindLiveObjects: 0.509800 ms CreateObjectMapping: 0.177500 ms MarkObjects: 2.931400 ms  DeleteObjects: 0.902300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010042 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.38 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.499 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1500ms)
+		BeginReloadAssembly (154ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (48ms)
+		EndReloadAssembly (1237ms)
+			LoadAssemblies (90ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (308ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (83ms)
+			SetupLoadedEditorAssemblies (642ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (106ms)
+				ProcessInitializeOnLoadAttributes (479ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.48 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6783 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 66 unused Assets / (4.9 MB). Loaded Objects now: 7840.
+Memory consumption went from 313.4 MB to 308.5 MB.
+Total: 5.181500 ms (FindLiveObjects: 0.577800 ms CreateObjectMapping: 0.183200 ms MarkObjects: 3.341400 ms  DeleteObjects: 1.077700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 561.438703 seconds.
+  path: Assets/Prefabs/Collectables/Strawberry Variant.prefab
+  artifactKey: Guid(5e3cb6f4f4c8e5f41a1207315921d998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Collectables/Strawberry Variant.prefab using Guid(5e3cb6f4f4c8e5f41a1207315921d998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19f742cb9382b70a8ab7c0fcdcbee9a8') in 1.036542 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 45.180147 seconds.
+  path: Assets/Materials
+  artifactKey: Guid(d7bda79c87c9e0b4881a8e14ed16ab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials using Guid(d7bda79c87c9e0b4881a8e14ed16ab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b991e405a2eda2b65ed942a7e39dc80') in 0.006272 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011619 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.557 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1558ms)
+		BeginReloadAssembly (194ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (26ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (65ms)
+		EndReloadAssembly (1262ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (325ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (84ms)
+			SetupLoadedEditorAssemblies (652ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (108ms)
+				ProcessInitializeOnLoadAttributes (481ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6783 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 67 unused Assets / (5.0 MB). Loaded Objects now: 7964.
+Memory consumption went from 313.8 MB to 308.8 MB.
+Total: 4.658400 ms (FindLiveObjects: 0.549000 ms CreateObjectMapping: 0.186400 ms MarkObjects: 2.996900 ms  DeleteObjects: 0.925000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010453 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.535 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1536ms)
+		BeginReloadAssembly (161ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (53ms)
+		EndReloadAssembly (1272ms)
+			LoadAssemblies (91ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (346ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (86ms)
+			SetupLoadedEditorAssemblies (640ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (106ms)
+				ProcessInitializeOnLoadAttributes (477ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.42 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6783 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 66 unused Assets / (4.9 MB). Loaded Objects now: 7979.
+Memory consumption went from 313.6 MB to 308.6 MB.
+Total: 5.518900 ms (FindLiveObjects: 0.567200 ms CreateObjectMapping: 0.208300 ms MarkObjects: 3.669200 ms  DeleteObjects: 1.072900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010069 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.37 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.509 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1510ms)
+		BeginReloadAssembly (147ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (1255ms)
+			LoadAssemblies (88ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (306ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (84ms)
+			SetupLoadedEditorAssemblies (654ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (106ms)
+				ProcessInitializeOnLoadAttributes (494ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.42 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6783 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 66 unused Assets / (5.0 MB). Loaded Objects now: 7994.
+Memory consumption went from 313.6 MB to 308.6 MB.
+Total: 4.631700 ms (FindLiveObjects: 0.575100 ms CreateObjectMapping: 0.209400 ms MarkObjects: 2.960300 ms  DeleteObjects: 0.886100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010348 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.466 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1467ms)
+		BeginReloadAssembly (147ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (1222ms)
+			LoadAssemblies (83ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (304ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (83ms)
+			SetupLoadedEditorAssemblies (632ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (105ms)
+				ProcessInitializeOnLoadAttributes (471ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6783 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 66 unused Assets / (4.9 MB). Loaded Objects now: 8009.
+Memory consumption went from 313.6 MB to 308.7 MB.
+Total: 5.670100 ms (FindLiveObjects: 0.700100 ms CreateObjectMapping: 0.188100 ms MarkObjects: 3.795800 ms  DeleteObjects: 0.984300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009502 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.23 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.472 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1473ms)
+		BeginReloadAssembly (147ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (46ms)
+		EndReloadAssembly (1230ms)
+			LoadAssemblies (88ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (317ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (85ms)
+			SetupLoadedEditorAssemblies (622ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (106ms)
+				ProcessInitializeOnLoadAttributes (462ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6783 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 66 unused Assets / (4.9 MB). Loaded Objects now: 8024.
+Memory consumption went from 313.6 MB to 308.7 MB.
+Total: 5.294200 ms (FindLiveObjects: 0.583400 ms CreateObjectMapping: 0.181500 ms MarkObjects: 3.599200 ms  DeleteObjects: 0.929100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010596 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.23 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.508 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1509ms)
+		BeginReloadAssembly (144ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (1266ms)
+			LoadAssemblies (83ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (318ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (88ms)
+			SetupLoadedEditorAssemblies (652ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (102ms)
+				ProcessInitializeOnLoadAttributes (489ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6783 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 66 unused Assets / (5.0 MB). Loaded Objects now: 8039.
+Memory consumption went from 313.7 MB to 308.7 MB.
+Total: 5.821000 ms (FindLiveObjects: 0.663600 ms CreateObjectMapping: 0.491700 ms MarkObjects: 3.589300 ms  DeleteObjects: 1.075400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009758 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.466 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1467ms)
+		BeginReloadAssembly (155ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (48ms)
+		EndReloadAssembly (1223ms)
+			LoadAssemblies (86ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (299ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (85ms)
+			SetupLoadedEditorAssemblies (631ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (102ms)
+				ProcessInitializeOnLoadAttributes (469ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (17ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6783 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 66 unused Assets / (5.0 MB). Loaded Objects now: 8054.
+Memory consumption went from 313.7 MB to 308.7 MB.
+Total: 5.289500 ms (FindLiveObjects: 0.750700 ms CreateObjectMapping: 0.375100 ms MarkObjects: 3.163100 ms  DeleteObjects: 0.999500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010521 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.26 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.481 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1482ms)
+		BeginReloadAssembly (144ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (46ms)
+		EndReloadAssembly (1240ms)
+			LoadAssemblies (83ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (302ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (81ms)
+			SetupLoadedEditorAssemblies (656ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (105ms)
+				ProcessInitializeOnLoadAttributes (489ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6783 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 66 unused Assets / (5.0 MB). Loaded Objects now: 8069.
+Memory consumption went from 313.7 MB to 308.7 MB.
+Total: 5.091600 ms (FindLiveObjects: 0.674500 ms CreateObjectMapping: 0.189000 ms MarkObjects: 3.206800 ms  DeleteObjects: 1.020100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 522.847533 seconds.
+  path: Assets/Textures/TexturesCom_Wood_SidingOutdoor9_3x1.5_1K_normal.tif
+  artifactKey: Guid(b73a1e9602fde95478d5abf282e24543) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/TexturesCom_Wood_SidingOutdoor9_3x1.5_1K_normal.tif using Guid(b73a1e9602fde95478d5abf282e24543) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ebfbe068ac0ce2b7ee2bb56334d3a13') in 0.058619 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.470565 seconds.
+  path: Assets/Textures/TexturesCom_Wood_SidingOutdoor9_3x1.5_1K_normal.tif
+  artifactKey: Guid(b73a1e9602fde95478d5abf282e24543) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/TexturesCom_Wood_SidingOutdoor9_3x1.5_1K_normal.tif using Guid(b73a1e9602fde95478d5abf282e24543) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c88860bee983008fcebd8c70cbbe88e0') in 0.014937 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.188489 seconds.
+  path: Assets/Textures/TexturesCom_Wood_SidingOutdoor9_3x1.5_1K_albedo.tif
+  artifactKey: Guid(3211401e9dd63004da94231639f110fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/TexturesCom_Wood_SidingOutdoor9_3x1.5_1K_albedo.tif using Guid(3211401e9dd63004da94231639f110fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf346fb14ab2babc052af85925f72fc8') in 0.013050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.889339 seconds.
+  path: Assets/Textures
+  artifactKey: Guid(02658785e2947e04ea8cbda21e162aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures using Guid(02658785e2947e04ea8cbda21e162aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da4f5a6cfdd3752b4ba5d3cb90b5c26b') in 0.005860 seconds 

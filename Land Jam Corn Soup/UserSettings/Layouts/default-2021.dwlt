@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357.3334
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -34,7 +34,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: TutorialWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -42,15 +42,15 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 854
-    height: 344.00006
-  m_MinSize: {x: 101, y: 121}
+    height: 367.33337
+  m_MinSize: {x: 301, y: 321}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 20}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -69,13 +69,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 963.3333
+    y: 940
     width: 2560
-    height: 344.00006
+    height: 367.33337
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 325
+  controlID: 111
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,9 +94,9 @@ MonoBehaviour:
     x: 416
     y: 0
     width: 474
-    height: 963.3333
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+    height: 940
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 42
+  controlID: 62
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 416
-    height: 963.3333
+    height: 940
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
@@ -170,7 +170,7 @@ MonoBehaviour:
     x: 854
     y: 0
     width: 1706
-    height: 344.00006
+    height: 367.33337
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 15}
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 43
+  controlID: 63
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -295,11 +295,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 2560
-    height: 963.3333
+    height: 940
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 44
+  controlID: 64
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -318,7 +318,7 @@ MonoBehaviour:
     x: 890
     y: 0
     width: 1670
-    height: 963.3333
+    height: 940
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
@@ -348,14 +348,246 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 19
+    y: 1012.6667
     width: 853
-    height: 637.00006
+    height: 346.33337
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_AllParagraphs: []
+  m_AllParagraphs:
+  - m_Type: 6
+    Title:
+      m_Untranslated: 
+    Text:
+      m_Untranslated: 
+    m_Tutorial: {fileID: 0}
+    m_Image: {fileID: 2800000, guid: 9050e5217ebc90e48bce5ea8d4141a78, type: 3}
+    m_Video: {fileID: 0}
+    m_CriteriaCompletion: 0
+    m_Criteria:
+      m_Items: []
+    m_MaskingSettings:
+      m_MaskingEnabled: 0
+      m_UnmaskedViews: []
+    m_Summary: 
+    m_Description: 
+    m_InstructionBoxTitle: 
+    m_InstructionText: 
+    m_TutorialButtonText: 
+  - m_Type: 0
+    Title:
+      m_Untranslated: What is Exposure?
+    Text:
+      m_Untranslated: "In HDRP, mastering <b>Exposure</b> is important to achieve
+        believable visuals.\n\nExposure is the amount of lighting affecting the sensor
+        of a camera. Cameras, like your eyes, can automatically adapt to the amount
+        of light in the environment. However, like in real life, it\u2019s important
+        to control the exposure of your HDRP cameras to prevent over- or underexposure.\n\nThere
+        are multiple exposure modes in HDRP. The most notable are:\n\n<b>\u2022 Fixed:</b>
+        It allows you to manually set the Scene exposure precisely. As a result,
+        the camera will not try to adapt to the lighting conditions when leaving
+        or entering dark areas. It is used whenever the lighting conditions remain
+        constant.\n\n<b>\u2022 Automatic Histogram:</b> It simulates how a camera
+        automatically adapts to dynamic lighting conditions within certain limits.
+        This mode is utilized when dealing with a Scene having a wide variety of
+        lighting intensities, such as indoor and outdoor areas."
+    m_Tutorial: {fileID: 0}
+    m_Image: {fileID: 0}
+    m_Video: {fileID: 0}
+    m_CriteriaCompletion: 0
+    m_Criteria:
+      m_Items: []
+    m_MaskingSettings:
+      m_MaskingEnabled: 0
+      m_UnmaskedViews: []
+    m_Summary: 
+    m_Description: 
+    m_InstructionBoxTitle: 
+    m_InstructionText: 
+    m_TutorialButtonText: 
+  - m_Type: 6
+    Title:
+      m_Untranslated: 
+    Text:
+      m_Untranslated: 
+    m_Tutorial: {fileID: 0}
+    m_Image: {fileID: 2800000, guid: 6912e347d75a02745b99e9fa6b736295, type: 3}
+    m_Video: {fileID: 0}
+    m_CriteriaCompletion: 0
+    m_Criteria:
+      m_Items: []
+    m_MaskingSettings:
+      m_MaskingEnabled: 0
+      m_UnmaskedViews: []
+    m_Summary: 
+    m_Description: 
+    m_InstructionBoxTitle: 
+    m_InstructionText: 
+    m_TutorialButtonText: 
+  - m_Type: 0
+    Title:
+      m_Untranslated: Fixed Exposure
+    Text:
+      m_Untranslated: 'In this example, let''s override the exposure globally.
+
+
+        1.
+        Right click in the <i>Hierarchy,</i> and create a <b>Volume</b> > <b>Global
+        Volume.</b>
+
+
+        2. Create a <b>New</b> Profile using the dedicated
+        button.
+
+
+        3. In the Volume component''s <i>Inspector,</i> set the
+        <b>Priority</b> to 1000, to ensure this volume can override all the other
+        volumes in the Scene.
+
+
+        4. Add an <b>Exposure</b> override, set its
+        <b>Mode</b> to <b>Fixed</b> and its <b>Fixed Exposure</b> value to 3.
+
+
+        5.
+        Head to the other rooms which receive a larger amount of light, and notice
+        how much brighter they appear, almost solid white.
+
+
+        6. Using the
+        <b>Fixed Exposure</b> slider, increase the Exposure value between 8 and 13
+        in order to accomodate for these brighter rooms.
+
+
+        As you can see,
+        the <b>Fixed</b> Exposure Mode requires the exposure to be manually tuned
+        for every lighting scenario. This might not be an acceptable solution for
+        dynamic scenarios displaying a wide range of lighting intensities like the
+        ones found in this Scene, from a relatively dark and artificially lit interior,
+        to a bright outdoor area lit by the sun.'
+    m_Tutorial: {fileID: 0}
+    m_Image: {fileID: 0}
+    m_Video: {fileID: 0}
+    m_CriteriaCompletion: 0
+    m_Criteria:
+      m_Items: []
+    m_MaskingSettings:
+      m_MaskingEnabled: 0
+      m_UnmaskedViews: []
+    m_Summary: 
+    m_Description: 
+    m_InstructionBoxTitle: 
+    m_InstructionText: 
+    m_TutorialButtonText: 
+  - m_Type: 6
+    Title:
+      m_Untranslated: 
+    Text:
+      m_Untranslated: 
+    m_Tutorial: {fileID: 0}
+    m_Image: {fileID: 2800000, guid: 058437c7e1c18774aa2ba060ec5bc322, type: 3}
+    m_Video: {fileID: 0}
+    m_CriteriaCompletion: 0
+    m_Criteria:
+      m_Items: []
+    m_MaskingSettings:
+      m_MaskingEnabled: 0
+      m_UnmaskedViews: []
+    m_Summary: 
+    m_Description: 
+    m_InstructionBoxTitle: 
+    m_InstructionText: 
+    m_TutorialButtonText: 
+  - m_Type: 0
+    Title:
+      m_Untranslated: Automatic Histogram Exposure
+    Text:
+      m_Untranslated: "Let's now switch the Exposure Mode to another one that can
+        automatically adpat to the Scene's lighting.\n\n1. In the <i>Hierarchy,</i>
+        select the <b>Global Volume</b> created at the previous step.\n\n2. In its
+        <i>Inspector,</i> Switch the Mode to <b>Automatic Histogram.</b>\n\nExplore
+        the Scene and notice how the camera now imitates the human eye adaptation
+        or the automatic exposure system of a camera. Dark areas may become brighter,
+        and bright ones may turn darker, automatically.\n\n\n<b>Expert tips</b>\n\n\u2022
+        Use the <b>Limit Min</b> and <b>Limit Max</b> overrides to control how much
+        the Automatic Exposure can fluctuate within a fixed range of values, to prevent
+        it from displaying too dark or too bright images.\n\n\u2022 Use the <b>Compensation</b>
+        overrie to slightly nudge the exposure up or down in case you aren't exactly
+        satisfied with the exposure value selected by the system.\n\n\u2022 HDRP
+        offers a wide range of mid grey targets, from 12.5% to 18% grey, to simulate
+        the exposure system from most camera manufacturers."
+    m_Tutorial: {fileID: 0}
+    m_Image: {fileID: 0}
+    m_Video: {fileID: 0}
+    m_CriteriaCompletion: 0
+    m_Criteria:
+      m_Items: []
+    m_MaskingSettings:
+      m_MaskingEnabled: 0
+      m_UnmaskedViews: []
+    m_Summary: 
+    m_Description: 
+    m_InstructionBoxTitle: 
+    m_InstructionText: 
+    m_TutorialButtonText: 
+  - m_Type: 6
+    Title:
+      m_Untranslated: 
+    Text:
+      m_Untranslated: 
+    m_Tutorial: {fileID: 0}
+    m_Image: {fileID: 2800000, guid: 9050e5217ebc90e48bce5ea8d4141a78, type: 3}
+    m_Video: {fileID: 0}
+    m_CriteriaCompletion: 0
+    m_Criteria:
+      m_Items: []
+    m_MaskingSettings:
+      m_MaskingEnabled: 0
+      m_UnmaskedViews: []
+    m_Summary: 
+    m_Description: 
+    m_InstructionBoxTitle: 
+    m_InstructionText: 
+    m_TutorialButtonText: 
+  - m_Type: 0
+    Title:
+      m_Untranslated: Congratulations!
+    Text:
+      m_Untranslated: 'In this tutorial, you learned how to control the exposure
+        to adjust the perceived brightness of a Scene.
+
+
+        While exposure is
+        a complex topic, understanding it can help you greatly improve the visual
+        quality of your projects.
+
+
+        For more information about Exposure,
+        watch this  in-depth <a href="https://youtu.be/yqCHiZrgKzs?t=1026">video
+        tutorial.</a>
+
+
+        You can also learn more about exposure and how to
+        debug it in the <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@latest/index.html?subfolder=/manual/Override-Exposure.html">documentation.</a>
+
+
+        <b>Note:</b>
+        You do not need to save your changes in order to follow other tutorials.'
+    m_Tutorial: {fileID: 0}
+    m_Image: {fileID: 0}
+    m_Video: {fileID: 0}
+    m_CriteriaCompletion: 0
+    m_Criteria:
+      m_Items: []
+    m_MaskingSettings:
+      m_MaskingEnabled: 0
+      m_UnmaskedViews: []
+    m_Summary: 
+    m_Description: 
+    m_InstructionBoxTitle: 
+    m_InstructionText: 
+    m_TutorialButtonText: 
   m_ActiveContainer: {fileID: 11400000, guid: 938ffbc4ff2eabb48a668123d363dfe1, type: 2}
   m_TutorialProjects: []
   m_VisibleContainers:
@@ -385,9 +617,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 854
-    y: 1036
+    y: 1012.6667
     width: 1705
-    height: 323.00006
+    height: 346.33337
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -405,23 +637,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Meshes/Foliage
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Meshes/Foliage
   m_LastFoldersGridSize: 16
   m_LastProjectPath: "D:\\Users\\Nathan\\Documents\\_C\xFCl\\Personal Projects\\Land
     Jam 2022\\Corn Soup Repo\\unity-land-jam-seasons\\Land Jam Corn Soup"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: cc7b0000
-    m_LastClickedID: 31692
-    m_ExpandedIDs: 00000000c0780000767b00007e7b0000b27b000000ca9a3b
+    scrollPos: {x: 0, y: 61.666626}
+    m_SelectedIDs: 38a10000
+    m_LastClickedID: 41272
+    m_ExpandedIDs: 00000000fe780000607a0000627a00006a7a0000f07c0000729f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -437,7 +669,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 7}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -449,7 +681,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c0780000
+    m_ExpandedIDs: 00000000fe780000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -477,23 +709,23 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000
+    m_ExpandedInstanceIDs: c62300007c7b000034a10000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Foliage
+      m_OriginalName: Foliage
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 40822
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 13}
+      m_ClientGUIView: {fileID: 7}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -528,7 +760,7 @@ MonoBehaviour:
     x: 416
     y: 72.66667
     width: 472
-    height: 942.3333
+    height: 919
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -569,7 +801,7 @@ MonoBehaviour:
     x: 0
     y: 72.66667
     width: 415
-    height: 942.3333
+    height: 919
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -577,9 +809,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: daeeffff78f2ffff18fbffff
+      m_SelectedIDs: 1268ffff
+      m_LastClickedID: -38894
+      m_ExpandedIDs: 0e89ffffaa8dffff3e8effff78a7ffff6cafffff0ab8ffff22b8ffff42d9ffff18fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -626,7 +858,7 @@ MonoBehaviour:
     x: 890
     y: 72.66667
     width: 1669
-    height: 942.3333
+    height: 919
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -680,7 +912,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 24.666666}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -852,7 +1084,7 @@ MonoBehaviour:
       index: 13
       layout: 4
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
-  m_Gizmos: 1
+  m_Gizmos: 0
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
@@ -861,9 +1093,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 45.235207, y: 0.50972897, z: 78.87133}
+    m_Target: {x: 37.540222, y: -0.37129897, z: 91.9605}
     speed: 2
-    m_Value: {x: 45.235207, y: 0.50972897, z: 78.87133}
+    m_Value: {x: 37.540222, y: -0.37129897, z: 91.9605}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -910,20 +1142,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.11509089, y: -0.6728566, z: 0.10704646, w: -0.7230823}
+    m_Target: {x: 0.09832542, y: 0.2744179, z: -0.02771295, w: 0.9564261}
     speed: 2
-    m_Value: {x: -0.1149136, y: -0.6738432, z: 0.107203506, w: -0.72196794}
+    m_Value: {x: 0.09830124, y: 0.27435043, z: -0.027706137, w: 0.95619094}
   m_Size:
-    m_Target: 12.124356
+    m_Target: 7.241463
     speed: 2
-    m_Value: 12.124356
+    m_Value: 7.241463
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 2
-    m_SpeedNormalized: 1
+    m_Speed: 1.0404807
+    m_SpeedNormalized: 0.52000034
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -964,7 +1196,7 @@ MonoBehaviour:
     x: 890
     y: 72.66667
     width: 1669
-    height: 942.3333
+    height: 919
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -975,7 +1207,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1669, y: 921.3333}
+  m_TargetSize: {x: 1669, y: 898}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -992,8 +1224,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -556.3334
     m_HBaseRangeMax: 556.3334
-    m_VBaseRangeMin: -307.1111
-    m_VBaseRangeMax: 307.1111
+    m_VBaseRangeMin: -299.33334
+    m_VBaseRangeMax: 299.33334
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1012,9 +1244,9 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 1669
-      height: 921.3333
-    m_Scale: {x: 1.6065589, y: 1.6065596}
-    m_Translation: {x: 834.4998, y: 460.66666}
+      height: 898
+    m_Scale: {x: 1.6065589, y: 1.6065598}
+    m_Translation: {x: 834.4998, y: 449}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -1022,12 +1254,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -519.43304
-      y: -286.7411
+      y: -279.4792
       width: 1038.8663
-      height: 573.4822
+      height: 558.9584
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 2503.5, y: 1413.5}
+  m_LastWindowPixelSize: {x: 2503.5, y: 1378.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000

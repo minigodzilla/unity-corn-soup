@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2021.3/staging' branch; Version is '2021.3.5f1 (40eb3a945986) revision 4254522'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19043) 64bit Core' Language: 'en' Physical Memory: 16334 MB
+OS: 'Windows 10  (10.0.19043) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 16289 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Unity.exe
 -name
 AssetImportWorker2
 -projectPath
-F:/Land Jam (ext. drive)/unity-land-jam-seasons/Land Jam Cornsoup
+C:/Users/malou/Documents/GitHub/unity-land-jam-seasons/Land Jam Corn Soup
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-63792
-Successfully changed project path to: F:/Land Jam (ext. drive)/unity-land-jam-seasons/Land Jam Cornsoup
-F:/Land Jam (ext. drive)/unity-land-jam-seasons/Land Jam Cornsoup
+52094
+Successfully changed project path to: C:/Users/malou/Documents/GitHub/unity-land-jam-seasons/Land Jam Corn Soup
+C:/Users/malou/Documents/GitHub/unity-land-jam-seasons/Land Jam Corn Soup
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,111 +47,108 @@ F:/Land Jam (ext. drive)/unity-land-jam-seasons/Land Jam Cornsoup
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 153.76 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 187.40 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.5f1 (40eb3a945986)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.5f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path F:/Land Jam (ext. drive)/unity-land-jam-seasons/Land Jam Cornsoup/Assets
+[Subsystems] Discovering subsystems at path C:/Users/malou/Documents/GitHub/unity-land-jam-seasons/Land Jam Corn Soup/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: AMD Radeon RX 5700 XT (ID=0x731f)
-    Vendor:   ATI
-    VRAM:     8148 MB
-    Driver:   27.20.1034.6
+    Renderer: NVIDIA GeForce GTX 1660 (ID=0x2184)
+    Vendor:   NVIDIA
+    VRAM:     5992 MB
+    Driver:   31.0.15.1640
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56596
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56224
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.5f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.011094 seconds.
+Registered in 0.009745 seconds.
 Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 156.59 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 157.51 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.771 seconds
+- Completed reload, in  0.715 seconds
 Domain Reload Profiling:
-	ReloadAssembly (771ms)
-		BeginReloadAssembly (81ms)
+	ReloadAssembly (716ms)
+		BeginReloadAssembly (71ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (572ms)
-			LoadAssemblies (75ms)
+		EndReloadAssembly (519ms)
+			LoadAssemblies (69ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (115ms)
+			SetupTypeCache (102ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (31ms)
-			SetupLoadedEditorAssemblies (373ms)
+			RebuildScriptCaches (23ms)
+			SetupLoadedEditorAssemblies (341ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (16ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (157ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (149ms)
-				ProcessInitializeOnLoadMethodAttributes (49ms)
+				RefreshPlugins (158ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (132ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.012323 seconds.
+Registered in 0.012912 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Cornsoup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image F:\Land Jam (ext. drive)\unity-land-jam-seasons\Land Jam Cornsoup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\malou\Documents\GitHub\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\malou\Documents\GitHub\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 161.33 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 160.81 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.945 seconds
+- Completed reload, in  2.813 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1946ms)
-		BeginReloadAssembly (124ms)
+	ReloadAssembly (2814ms)
+		BeginReloadAssembly (104ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (1708ms)
-			LoadAssemblies (99ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (2583ms)
+			LoadAssemblies (96ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (380ms)
+			SetupTypeCache (579ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (126ms)
-			SetupLoadedEditorAssemblies (1064ms)
+			RebuildScriptCaches (110ms)
+			SetupLoadedEditorAssemblies (1744ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (161ms)
-				BeforeProcessingInitializeOnLoad (150ms)
-				ProcessInitializeOnLoadAttributes (577ms)
-				ProcessInitializeOnLoadMethodAttributes (154ms)
+				BeforeProcessingInitializeOnLoad (155ms)
+				ProcessInitializeOnLoadAttributes (670ms)
+				ProcessInitializeOnLoadMethodAttributes (740ms)
 				AfterProcessingInitializeOnLoad (10ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 1.74 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 2.33 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 7148 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 97 unused Assets / (5.0 MB). Loaded Objects now: 7639.
-Memory consumption went from 327.0 MB to 322.1 MB.
-Total: 6.359300 ms (FindLiveObjects: 0.791900 ms CreateObjectMapping: 0.466500 ms MarkObjects: 4.018300 ms  DeleteObjects: 1.081700 ms)
+Unloading 7146 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 97 unused Assets / (5.0 MB). Loaded Objects now: 7637.
+Memory consumption went from 334.2 MB to 329.2 MB.
+Total: 8.135000 ms (FindLiveObjects: 0.992700 ms CreateObjectMapping: 0.289600 ms MarkObjects: 4.606000 ms  DeleteObjects: 2.245300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -165,13 +162,212 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 4640.930358 seconds.
-  path: Assets/Fat grass.terrainlayer
-  artifactKey: Guid(76ea04f3bcb8b7a4bb5bab8ae0753294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fat grass.terrainlayer using Guid(76ea04f3bcb8b7a4bb5bab8ae0753294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ef8fca612c32254bfa37990e362f97d') in 0.090059 seconds 
+  Time since last request: 136997.920065 seconds.
+  path: Assets/klen/Demo
+  artifactKey: Guid(c7e4f6eba01a3944faf41f437104dc2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/klen/Demo using Guid(c7e4f6eba01a3944faf41f437104dc2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44152d37a25d04c3c1ad461d8374344b') in 0.018353 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 124.749144 seconds.
-  path: Assets/Fat grass.terrainlayer
-  artifactKey: Guid(76ea04f3bcb8b7a4bb5bab8ae0753294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fat grass.terrainlayer using Guid(76ea04f3bcb8b7a4bb5bab8ae0753294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '801b9622ca3c738b21c6f79e583c5a9d') in 0.013187 seconds 
+  Time since last request: 0.573915 seconds.
+  path: Assets/klen/Model
+  artifactKey: Guid(d4aeb59c60d5a244795922fa1f0e360b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/klen/Model using Guid(d4aeb59c60d5a244795922fa1f0e360b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0526e33668ea683a8b38c335cac52173') in 0.006070 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.249565 seconds.
+  path: Assets/Prefabs/Collectables
+  artifactKey: Guid(f21fcad4855e65f409d6f0af0577a8d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Collectables using Guid(f21fcad4855e65f409d6f0af0577a8d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3189a96bf85270ab03e9a8e3e5bf6a3') in 0.006387 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 278.091227 seconds.
+  path: Assets/Prefabs/Collectables/Fresh Corn Variant.prefab
+  artifactKey: Guid(95fb37e3dcd722149a130dd9e78a06ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Collectables/Fresh Corn Variant.prefab using Guid(95fb37e3dcd722149a130dd9e78a06ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da828e4152d5d008803801462d320255') in 2.501328 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.166956 seconds.
+  path: Assets/Prefabs/Collectables/Strawberry Variant.prefab
+  artifactKey: Guid(5e3cb6f4f4c8e5f41a1207315921d998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Collectables/Strawberry Variant.prefab using Guid(5e3cb6f4f4c8e5f41a1207315921d998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '017155086e2b73a684c9cd20128eed1f') in 0.043354 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 63.610857 seconds.
+  path: Assets/Meshes
+  artifactKey: Guid(f261412f6a19b124aba17dad274dcbbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes using Guid(f261412f6a19b124aba17dad274dcbbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37a600cee656b324bdd27411465596a2') in 0.005812 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.547199 seconds.
+  path: Assets/Meshes/Foliage
+  artifactKey: Guid(48363916c89acf441863a9e76291e4a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/Foliage using Guid(48363916c89acf441863a9e76291e4a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65c780d9858ddccac1fa5826f59fd665') in 0.006291 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.658922 seconds.
+  path: Assets/Meshes/Foliage/CedarTree.fbx
+  artifactKey: Guid(43a462be5a4fcfd409853944329b54b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/Foliage/CedarTree.fbx using Guid(43a462be5a4fcfd409853944329b54b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3391c126df66444d7f116daabaac08ce') in 0.211752 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.112726 seconds.
+  path: Assets/Meshes/corn.fbx
+  artifactKey: Guid(4cf53cc946af1194ba381ec2bbc08a6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/corn.fbx using Guid(4cf53cc946af1194ba381ec2bbc08a6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db5328b51f47ccb40d924e90ade782f0') in 0.058483 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 102.855447 seconds.
+  path: Assets/Meshes/corn.fbx
+  artifactKey: Guid(4cf53cc946af1194ba381ec2bbc08a6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/corn.fbx using Guid(4cf53cc946af1194ba381ec2bbc08a6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd229cb3ab9deb89e4017b4a90e06d486') in 0.046354 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.988989 seconds.
+  path: Assets/Meshes/corn_texture.png
+  artifactKey: Guid(f97c339474e168e45849b09561928ef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/corn_texture.png using Guid(f97c339474e168e45849b09561928ef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea6adccaa99240d53d8e19be7afbeccb') in 0.020066 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 106.187918 seconds.
+  path: Assets/Meshes/corn
+  artifactKey: Guid(3ebf5ebd9aa73db48822f2c88850d063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/corn using Guid(3ebf5ebd9aa73db48822f2c88850d063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bab2d6e24dc403059c902f5df136fb2') in 0.002126 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011690 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\malou\Documents\GitHub\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\malou\Documents\GitHub\unity-land-jam-seasons\Land Jam Corn Soup\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.19 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.476 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1477ms)
+		BeginReloadAssembly (176ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (24ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (59ms)
+		EndReloadAssembly (1204ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (309ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (619ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (102ms)
+				ProcessInitializeOnLoadAttributes (446ms)
+				ProcessInitializeOnLoadMethodAttributes (44ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.14 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6783 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 66 unused Assets / (4.9 MB). Loaded Objects now: 7808.
+Memory consumption went from 321.0 MB to 316.0 MB.
+Total: 5.001600 ms (FindLiveObjects: 0.572400 ms CreateObjectMapping: 0.183100 ms MarkObjects: 3.278800 ms  DeleteObjects: 0.966500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 275.563893 seconds.
+  path: Assets/Meshes/corn/Materials
+  artifactKey: Guid(4001e6725e3108245a29b4a4fc16b833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/corn/Materials using Guid(4001e6725e3108245a29b4a4fc16b833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af85e6e08f4b79593fad7c3c08355fc1') in 0.017115 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.127187 seconds.
+  path: Assets/Meshes/cornPlant
+  artifactKey: Guid(3ebf5ebd9aa73db48822f2c88850d063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/cornPlant using Guid(3ebf5ebd9aa73db48822f2c88850d063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8b3d58e654418631ab4cfa305032510') in 0.005770 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.915103 seconds.
+  path: Assets/Meshes/Corn Plant
+  artifactKey: Guid(3ebf5ebd9aa73db48822f2c88850d063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/Corn Plant using Guid(3ebf5ebd9aa73db48822f2c88850d063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3957fe96e73d2c58c5aee18cb34c48a') in 0.006272 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 603.514016 seconds.
+  path: Assets/Meshes/Corn Cob
+  artifactKey: Guid(a2ea89b4ee114c74082c5bceec2b0435) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/Corn Cob using Guid(a2ea89b4ee114c74082c5bceec2b0435) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16eb2ac390be96afa284374810a2f20c') in 0.006355 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.135164 seconds.
+  path: Assets/Meshes/Corn Cob/Corn.fbx
+  artifactKey: Guid(ff432855622aa6a4b925e4f874663602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/Corn Cob/Corn.fbx using Guid(ff432855622aa6a4b925e4f874663602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b0d1da7fd2b91b44c208718e80770fd') in 0.735004 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.982349 seconds.
+  path: Assets/Meshes/Corn Cob/Corn.fbx
+  artifactKey: Guid(ff432855622aa6a4b925e4f874663602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/Corn Cob/Corn.fbx using Guid(ff432855622aa6a4b925e4f874663602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd39e7c1f34bb46fe481f756371513735') in 0.068033 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.231962 seconds.
+  path: Assets/Meshes/Corn Cob/Normal Map.png
+  artifactKey: Guid(e1d075dde49ed8d4e84bdb68d201ad8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/Corn Cob/Normal Map.png using Guid(e1d075dde49ed8d4e84bdb68d201ad8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd003504899de199ea613532ef935c000') in 0.017142 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.301254 seconds.
+  path: Assets/Meshes/Corn Cob/Corn_Color.png
+  artifactKey: Guid(f1efea51d2f740a4f8394c7d198d26c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/Corn Cob/Corn_Color.png using Guid(f1efea51d2f740a4f8394c7d198d26c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1036dce1f460e6c91ab7bcafdf81d92b') in 0.014467 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 66.095660 seconds.
+  path: Assets/Tree_Textures/normal_specular.png
+  artifactKey: Guid(e2752c5ca2f1b4e439cc1b24f03ee632) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tree_Textures/normal_specular.png using Guid(e2752c5ca2f1b4e439cc1b24f03ee632) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96f6a11aa06331b7bd065428f77b69f9') in 0.029872 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/SampleSceneAssets/Textures/General/Plant_C_MaskMap.png
+  artifactKey: Guid(853f2087cf0a1724bbc1a78c93af4a43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SampleSceneAssets/Textures/General/Plant_C_MaskMap.png using Guid(853f2087cf0a1724bbc1a78c93af4a43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c0a8a2cf9a697246303e4a31f86fa6b') in 0.022777 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/SampleSceneAssets/Tutorials/Assets/PBL-3.png
+  artifactKey: Guid(a28f5a02fac2c0e49aa0c9b47436a55c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SampleSceneAssets/Tutorials/Assets/PBL-3.png using Guid(a28f5a02fac2c0e49aa0c9b47436a55c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3b89627c153ed3d33d36df1222300dc') in 0.024200 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/SampleSceneAssets/Tutorials/Assets/PBL-2.png
+  artifactKey: Guid(647cb5e6c7457754f80b7c8e36779962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SampleSceneAssets/Tutorials/Assets/PBL-2.png using Guid(647cb5e6c7457754f80b7c8e36779962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd290575a691e3b0840c1cac2df08b9ac') in 0.019901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/SampleSceneAssets/Tutorials/Assets/PBL-1.png
+  artifactKey: Guid(48741350bee2a87439465ecde9696ebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SampleSceneAssets/Tutorials/Assets/PBL-1.png using Guid(48741350bee2a87439465ecde9696ebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb357fe95534e98646c96d4cd66676f4') in 0.018618 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -1121,3 +1121,15 @@ Received Import Request.
   path: Assets/Textures
   artifactKey: Guid(02658785e2947e04ea8cbda21e162aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Textures using Guid(02658785e2947e04ea8cbda21e162aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da4f5a6cfdd3752b4ba5d3cb90b5c26b') in 0.005860 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 408.305064 seconds.
+  path: Assets/dirt.terrainlayer
+  artifactKey: Guid(53547f7dfe53b3243aa8ca8148640f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/dirt.terrainlayer using Guid(53547f7dfe53b3243aa8ca8148640f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89a97d81c93a667b1b1ab6f5473b1e1c') in 0.055479 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 434.840561 seconds.
+  path: Assets/Prefabs/Collectables/Recipe Book Variant.prefab
+  artifactKey: Guid(b275c90d16492754a8db3a19543be3d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Collectables/Recipe Book Variant.prefab using Guid(b275c90d16492754a8db3a19543be3d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd51884a9b347440371ed8acb058a51c7') in 1.074938 seconds 

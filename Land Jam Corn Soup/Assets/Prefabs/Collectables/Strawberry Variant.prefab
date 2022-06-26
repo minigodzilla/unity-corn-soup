@@ -262,15 +262,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 27313840767984592, guid: c3a5b610dfacdf24199a93a6b4d7aab5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 163.8863
+      value: 190.73506
       objectReference: {fileID: 0}
     - target: {fileID: 27313840767984592, guid: c3a5b610dfacdf24199a93a6b4d7aab5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.008591
+      value: 8.417
       objectReference: {fileID: 0}
     - target: {fileID: 27313840767984592, guid: c3a5b610dfacdf24199a93a6b4d7aab5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 157.083
+      value: 128.26567
       objectReference: {fileID: 0}
     - target: {fileID: 27313840767984592, guid: c3a5b610dfacdf24199a93a6b4d7aab5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -302,19 +302,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 27313840767984593, guid: c3a5b610dfacdf24199a93a6b4d7aab5, type: 3}
       propertyPath: m_Name
-      value: Strawberry Variant
+      value: Strawberry (8)
       objectReference: {fileID: 0}
     - target: {fileID: 27313842124105474, guid: c3a5b610dfacdf24199a93a6b4d7aab5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.37243
+      value: 0.8482041
       objectReference: {fileID: 0}
     - target: {fileID: 27313842124105474, guid: c3a5b610dfacdf24199a93a6b4d7aab5, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.37243
+      value: 0.8482041
       objectReference: {fileID: 0}
     - target: {fileID: 27313842124105474, guid: c3a5b610dfacdf24199a93a6b4d7aab5, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.37243
+      value: 0.8482041
       objectReference: {fileID: 0}
     - target: {fileID: 27313842124105484, guid: c3a5b610dfacdf24199a93a6b4d7aab5, type: 3}
       propertyPath: m_Enabled

@@ -17,6 +17,7 @@
 
 .label {
     padding: 0;
+    -unity-font-definition: none;
 }
 
 #container-stats .unity-group-box {
@@ -34,6 +35,12 @@
     width: 24px;
     height: 24px;
     margin-right: 8px;
+}
+
+#container-stats .unity-group-box .label {
+    -unity-font-weight: bold;
+    -unity-font-style: bold;
+    -unity-font-definition: none;
 }
 
 #pick-screen #bottom-half #cta {

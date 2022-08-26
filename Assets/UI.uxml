@@ -16,7 +16,7 @@
             <ui:VisualElement name="container-stats" style="justify-content: flex-end;">
                 <ui:GroupBox name="stat-corn">
                     <ui:VisualElement name="icon" class="icon" style="background-image: url(&apos;project://database/Assets/Textures/UI/icon_corn.png?fileID=21300000&amp;guid=e81495e04c3565e4bb82dc34984f2980&amp;type=3#icon_corn&apos;);" />
-                    <ui:Label text="2" display-tooltip-when-elided="true" name="label" class="label" style="color: rgb(255, 255, 255); -unity-text-outline-color: rgba(0, 0, 0, 0.83); text-shadow: 1px 2px 0 rgb(0, 0, 0);" />
+                    <ui:Label text="2" display-tooltip-when-elided="true" name="label" class="label" style="color: rgb(255, 255, 255); -unity-text-outline-color: rgba(0, 0, 0, 0.83); text-shadow: 1px 2px 1px rgb(0, 0, 0);" />
                 </ui:GroupBox>
                 <ui:GroupBox name="stat-strawb">
                     <ui:VisualElement name="icon" class="icon" style="background-image: url(&apos;project://database/Assets/Textures/UI/icon_strawb.png?fileID=21300000&amp;guid=f13a85ab70757a144a8221a16c2c237a&amp;type=3#icon_strawb&apos;);" />

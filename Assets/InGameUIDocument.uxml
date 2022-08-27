@@ -5,7 +5,7 @@
             <ui:VisualElement name="top-half" style="position: absolute; left: 0; top: 0; right: 0; bottom: 50%; align-items: center; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 30px;">
                 <ui:VisualElement name="gradient" class="gradient" style="background-image: url(&apos;project://database/Assets/Textures/UI/UI_gradient_top.png?fileID=2800000&amp;guid=d8576aa6cb19ef645a7003f70a28b9b1&amp;type=3#UI_gradient_top&apos;);" />
                 <ui:Label text="Ken&apos;niiohontésha" display-tooltip-when-elided="true" name="native-name" class="label" style="-unity-font: url(&apos;project://database/Assets/Fonts/DarkerGrotesque-Bold.ttf?fileID=12800000&amp;guid=56846325000338942b08c71ca8756499&amp;type=3#DarkerGrotesque-Bold&apos;); font-size: 48px; height: 48px; -unity-text-align: lower-center; letter-spacing: 0.25px; color: rgb(255, 255, 255); text-shadow: 1px 2px 1px rgb(0, 0, 0); -unity-text-outline-color: rgba(0, 0, 0, 0.83);" />
-                <ui:Label text="Strawberry" display-tooltip-when-elided="true" name="label" class="label" style="font-size: 30px; -unity-font: url(&apos;project://database/Assets/Fonts/DarkerGrotesque-Regular.ttf?fileID=12800000&amp;guid=fe9d7ce38e904b24a8b815488f9fdf5c&amp;type=3#DarkerGrotesque-Regular&apos;); -unity-text-align: lower-center; height: 30px; letter-spacing: 0.75px; margin-top: -2px; color: rgb(255, 255, 255); text-shadow: 1px 2px 1px rgb(0, 0, 0);" />
+                <ui:Label text="Strawberry" display-tooltip-when-elided="true" name="english-name" class="label" style="font-size: 30px; -unity-font: url(&apos;project://database/Assets/Fonts/DarkerGrotesque-Regular.ttf?fileID=12800000&amp;guid=fe9d7ce38e904b24a8b815488f9fdf5c&amp;type=3#DarkerGrotesque-Regular&apos;); -unity-text-align: lower-center; height: 30px; letter-spacing: 0.75px; margin-top: -2px; color: rgb(255, 255, 255); text-shadow: 1px 2px 1px rgb(0, 0, 0);" />
             </ui:VisualElement>
             <ui:VisualElement name="bottom-half" style="position: absolute; left: 0; top: 50%; right: 0; bottom: 0; align-items: center; justify-content: flex-end; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 30px;">
                 <ui:VisualElement name="gradient" class="gradient" style="background-image: url(&apos;project://database/Assets/Textures/UI/UI_gradient_bottom.png?fileID=2800000&amp;guid=c743147d72eaffe418a856b7ec1b5526&amp;type=3#UI_gradient_bottom&apos;);" />
@@ -22,6 +22,11 @@
                     <ui:VisualElement name="icon" class="icon" style="background-image: url(&apos;project://database/Assets/Textures/UI/icon_strawb.png?fileID=21300000&amp;guid=f13a85ab70757a144a8221a16c2c237a&amp;type=3#icon_strawb&apos;);" />
                     <ui:Label text="3" display-tooltip-when-elided="true" name="label" class="label" style="color: rgb(255, 255, 255); text-shadow: 1px 2px 1px rgb(0, 0, 0);" />
                 </ui:GroupBox>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="dialogue-screen" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: flex-end;">
+            <ui:VisualElement name="dialogue-box">
+                <ui:Label text="I&apos;m Grandma! Here is some Grandma dialogue." display-tooltip-when-elided="true" name="dialogue-text" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; font-size: 32px;" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

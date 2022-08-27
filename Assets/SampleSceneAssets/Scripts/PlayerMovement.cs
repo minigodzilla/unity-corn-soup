@@ -51,6 +51,15 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (UserInterfaceController.Instance.dialogueQueue.Count > 0) {
+            movement.Disable();
+            jump.Disable();
+        }
+        else {
+            movement.Enable();
+            jump.Enable();
+        }
+
         float x;
         float z;
         bool jumpPressed = false;

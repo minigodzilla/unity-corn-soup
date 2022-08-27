@@ -13,7 +13,7 @@ public class PickerUpper : MonoBehaviour
 
     public List<Collectable.IngredientType> ingredientsInInventory = new List<Collectable.IngredientType>();
 
-    private Collectable ingredientInView = null;
+    public Collectable ingredientInView = null;
 
     public bool hasAllVitalIngredients = false;
     public bool hasStrawberry = false;

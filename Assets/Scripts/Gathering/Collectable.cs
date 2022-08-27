@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    public enum IngredientType { strawberry, freshBeans, freshCorn, driedBeans, driedCorn, venison, recipeBook, ash };
 
+    public enum IngredientType { strawberry, freshBeans, freshCorn, driedBeans, driedCorn, venison, recipeBook, ash };
+    
     public IngredientType type;
+    //public Dictionary<string,string> nameDictionary;
+
     public Material highlightMaterial;
     private Material defaultMaterial;
 

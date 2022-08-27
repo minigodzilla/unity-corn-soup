@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PickerUpper : MonoBehaviour
 {
+    public static PickerUpper Instance { get; private set; }
+
     public float pickupRange = 3;
 
     private Transform cameraTransform;
@@ -19,6 +21,15 @@ public class PickerUpper : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null && Instance != this) 
+        { 
+            Destroy(this); 
+        } 
+        else 
+        { 
+            Instance = this; 
+        }
+        
         cameraTransform = Camera.main.transform;
     }
 
@@ -84,6 +95,17 @@ public class PickerUpper : MonoBehaviour
         print(message);
 
         CheckIfHasAllIngredients();
+    }
+
+    public int IngredientCount(Collectable.IngredientType ingredient) 
+    {
+        int count = 0;
+        foreach(Collectable.IngredientType item in ingredientsInInventory) {
+            if (item == ingredient) {
+                count++;
+            }
+        }
+        return count;
     }
 
     private void CheckIfHasAllIngredients()

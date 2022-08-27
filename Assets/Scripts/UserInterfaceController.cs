@@ -115,7 +115,7 @@ public class UserInterfaceController : MonoBehaviour
         else {
             dialogueScreen.style.display = DisplayStyle.None;
             if (PlayerApproachedDoorWithAllIngredients && !recipeSequenceStarted) {
-                OnAllIngredientsRetrieved();
+                // OnAllIngredientsRetrieved();
             }
         }
 

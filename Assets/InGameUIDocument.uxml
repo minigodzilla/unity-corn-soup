@@ -12,7 +12,7 @@
                 <ui:Label name="cta" text="CLICK TO COLLECT" display-tooltip-when-elided="true" class="label" style="-unity-text-align: middle-center; height: 24px; -unity-font-definition: none; -unity-font-style: normal; letter-spacing: 20px; color: rgb(255, 255, 255); text-shadow: 1px 2px 1px rgb(0, 0, 0);" />
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="hud-screen" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; flex-direction: row; align-items: flex-end; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 30px;">
+        <ui:VisualElement name="hud-screen" style="position: absolute; left: 0; top: -1px; right: 0; bottom: 1px; flex-direction: row; align-items: flex-end; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 30px;">
             <ui:VisualElement name="container-stats" style="justify-content: flex-end;">
                 <ui:GroupBox name="stat-corn">
                     <ui:VisualElement name="icon" class="icon" style="background-image: url(&apos;project://database/Assets/Textures/UI/icon_corn.png?fileID=21300000&amp;guid=e81495e04c3565e4bb82dc34984f2980&amp;type=3#icon_corn&apos;);" />

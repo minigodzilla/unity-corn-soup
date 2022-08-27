@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.90620196, g: 0.65451336, b: 0.6468115, a: 1}
+  m_IndirectSpecularColor: {r: 0.90549386, g: 0.6550814, b: 0.647673, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1351,7 +1351,7 @@ GameObject:
   - component: {fileID: 250222444}
   - component: {fileID: 250222443}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: RoofHalf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2104,7 +2104,7 @@ GameObject:
   - component: {fileID: 405917761}
   - component: {fileID: 405917760}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: RoofHalf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2258,7 +2258,7 @@ GameObject:
   - component: {fileID: 429703125}
   - component: {fileID: 429703124}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3598,7 +3598,7 @@ GameObject:
   - component: {fileID: 686748102}
   - component: {fileID: 686748101}
   m_Layer: 0
-  m_Name: hOUSE
+  m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4077,9 +4077,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupRange: 3
   ingredientsInInventory: 
+  ingredientInView: {fileID: 0}
   hasAllVitalIngredients: 0
   hasStrawberry: 0
   hasFreshCornOrBeans: 0
+  DoorGameObject: {fileID: 429703122}
 --- !u!1001 &831624752
 PrefabInstance:
   m_ObjectHideFlags: 0

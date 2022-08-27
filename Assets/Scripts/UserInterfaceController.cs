@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
-using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class UserInterfaceController : MonoBehaviour
 {
@@ -25,6 +26,15 @@ public class UserInterfaceController : MonoBehaviour
     public VisualElement dialogueScreen;
     public Label dialogueText;
     public Queue<string> dialogueQueue;
+
+    public VisualElement recipeScreen;
+    public GroupBox recipeVisual;
+    public Label recipeText;
+    //           Tuple<textString,elementIdString>
+    public Queue<Tuple<string,string>> recipeQueue;
+    public bool recipeSequenceStarted = false;
+
+    public bool PlayerApproachedDoorWithAllIngredients = false;
 
     private void Awake()
     {
@@ -59,32 +69,38 @@ public class UserInterfaceController : MonoBehaviour
         dialogueScreen = root.Query<VisualElement>("dialogue-screen").First();
         dialogueText = dialogueScreen.Query<Label>("dialogue-text").First();
 
+        recipeScreen = root.Query<VisualElement>("recipe-screen").First();
+        recipeVisual = recipeScreen.Query<GroupBox>("recipe-visual").First();
+        recipeText = recipeScreen.Query<Label>("recipe-text").First();
+        recipeScreen.style.display = DisplayStyle.None;
+
+        recipeQueue = new();
         dialogueQueue = new();
-        dialogueQueue.Enqueue("Hello Steve");
-        dialogueQueue.Enqueue("Hello Liam");
+
+        OnStartGame();
     }
 
     // Update is called once per frame
     void Update()
     {
         // HUD Handling
-        if (PickerUpper.Instance.IngredientCount(Collectable.IngredientType.freshCorn) <= 0) {
+        if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn) <= 0) {
             statCorn.style.display = DisplayStyle.None;
         }
         else {
             statCorn.style.display = DisplayStyle.Flex;
         }
 
-        statCornLabel.text = PickerUpper.Instance.IngredientCount(Collectable.IngredientType.freshCorn).ToString();
+        statCornLabel.text = PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn).ToString();
 
         // PickScreen Handling
-        if (PickerUpper.Instance.ingredientInView == null) {
+        if (PlayerManager.Instance.ingredientInView == null) {
             pickScreen.style.display = DisplayStyle.None;
         }
         else {
            pickScreen.style.display = DisplayStyle.Flex;
-           nativeName.text = ingredientDict[PickerUpper.Instance.ingredientInView.type]["mo"];
-           englishName.text = ingredientDict[PickerUpper.Instance.ingredientInView.type]["en"];
+           nativeName.text = ingredientDict[PlayerManager.Instance.ingredientInView.type]["mo"];
+           englishName.text = ingredientDict[PlayerManager.Instance.ingredientInView.type]["en"];
         }
 
         if (dialogueQueue.Count > 0) {
@@ -98,6 +114,67 @@ public class UserInterfaceController : MonoBehaviour
         }
         else {
             dialogueScreen.style.display = DisplayStyle.None;
+            if (PlayerApproachedDoorWithAllIngredients && !recipeSequenceStarted) {
+                OnAllIngredientsRetrieved();
+            }
         }
+
+        if (recipeQueue.Count > 0) {
+            pickScreen.style.display = DisplayStyle.None;
+            dialogueScreen.style.display = DisplayStyle.None;
+            recipeScreen.style.display = DisplayStyle.Flex;
+            Tuple<string,string> peekValue = recipeQueue.Peek();
+            recipeText.text = peekValue.Item1;
+
+            foreach(VisualElement element in recipeVisual?.Children()) {
+                if (element.name == peekValue.Item2) {
+                    element.style.display = DisplayStyle.Flex;
+                }
+                else {
+                    element.style.display = DisplayStyle.None;
+                }
+            }
+
+            if (Input.GetMouseButtonDown(0)) {
+                Debug.Log(recipeQueue.Peek());
+                recipeQueue.Dequeue();
+                Debug.Log(recipeQueue.Peek());
+            }
+        }
+        else {
+            if (recipeSequenceStarted) {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
+    }
+
+    public void OnPlayerApproachedDoor() {
+        dialogueQueue = new();
+        dialogueQueue.Enqueue("Let's see what you brought me...");
+        if (PlayerManager.Instance) {
+            if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn) > 0) {
+                dialogueQueue.Enqueue($"You have corn...");
+            }
+            else {
+                dialogueQueue.Enqueue($"You don't have any corn yet... Grab some from the cornfield...");
+            }
+        }
+    }
+
+    public void OnStartGame() {
+        dialogueQueue = new();
+        dialogueQueue.Enqueue("We're making corn soup today... Here's what you need to bring me...");
+        dialogueQueue.Enqueue("Some fresh corn...");
+        dialogueQueue.Enqueue("Some beans...");
+        dialogueQueue.Enqueue("And bring strawberries for a surprise...");
+        dialogueQueue.Enqueue("Off you go!");
+    }
+
+    public void OnAllIngredientsRetrieved() {
+        recipeSequenceStarted = true;
+        recipeScreen.style.display = DisplayStyle.Flex;
+        recipeQueue = new();
+        recipeQueue.Enqueue(new Tuple<string,string>("Now we make the corn soup...","recipe-part-1"));
+        recipeQueue.Enqueue(new Tuple<string,string>("Watch carefully...","recipe-part-2"));
     }
 }

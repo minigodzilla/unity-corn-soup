@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickerUpper : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
-    public static PickerUpper Instance { get; private set; }
+    public static PlayerManager Instance { get; private set; }
 
     public float pickupRange = 3;
 
@@ -18,6 +18,9 @@ public class PickerUpper : MonoBehaviour
     public bool hasAllVitalIngredients = false;
     public bool hasStrawberry = false;
     public bool hasFreshCornOrBeans = false;
+
+    public GameObject DoorGameObject;
+    private bool approachedDoor = true;
 
     private void Awake()
     {
@@ -46,6 +49,15 @@ public class PickerUpper : MonoBehaviour
             CheckForCollectables();
         }
 
+        if (Vector3.Distance(transform.position,DoorGameObject.transform.position) < 3) {
+            if (!approachedDoor) {
+                UserInterfaceController.Instance.OnPlayerApproachedDoor();
+            }
+            approachedDoor = true;
+        }
+        else if (Vector3.Distance(transform.position,DoorGameObject.transform.position) > 5) {
+            approachedDoor = false;
+        }
     }
 
     private void PickUp(Collectable ingredientToPickUp)

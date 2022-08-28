@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.90549386, g: 0.6550814, b: 0.647673, a: 1}
+  m_IndirectSpecularColor: {r: 0.907729, g: 0.65505433, b: 0.64669716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1594,7 +1594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284196736}
   m_LocalRotation: {x: -0.7072646, y: 0.1472571, z: 0.22340548, w: 0.6543563}
-  m_LocalPosition: {x: 107.02723, y: 3.1431723, z: 105.8792}
+  m_LocalPosition: {x: 107.02723, y: 3.16, z: 105.29}
   m_LocalScale: {x: 0.00399846, y: 0.00399846, z: 0.00070420874}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7063,6 +7063,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiDocument: {fileID: 1306764724}
+  recipeSequenceStarted: 0
+  PlayerApproachedDoorWithAllIngredients: 1
 --- !u!1001 &1308642901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11654,11 +11656,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2701539927961386985, guid: 234d9da91660de64ab9212695f56af1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1423829
+      value: 3.16
       objectReference: {fileID: 0}
     - target: {fileID: 2701539927961386985, guid: 234d9da91660de64ab9212695f56af1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 105.67847
+      value: 105.29
       objectReference: {fileID: 0}
     - target: {fileID: 2701539927961386985, guid: 234d9da91660de64ab9212695f56af1f, type: 3}
       propertyPath: m_LocalRotation.w

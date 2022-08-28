@@ -32,14 +32,14 @@
         <ui:VisualElement name="recipe-screen" style="width: 100%; height: 100%; background-color: rgb(53, 1, 1); justify-content: center; position: absolute; left: 0; top: 0; right: 0;">
             <ui:GroupBox name="recipe-visual">
                 <ui:GroupBox name="recipe-part-1">
-                    <ui:Label text="RECIPE VISUAL 1 " display-tooltip-when-elided="true" name="text" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; font-size: 32px;" />
+                    <ui:Label text="RECIPE VISUAL 1 " display-tooltip-when-elided="true" name="text" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; font-size: 32px; color: rgba(255, 255, 255, 255);" />
                 </ui:GroupBox>
                 <ui:GroupBox name="recipe-part-2">
-                    <ui:Label text="RECIPE VISUAL 2" display-tooltip-when-elided="true" name="text" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; font-size: 32px;" />
+                    <ui:Label text="RECIPE VISUAL 2" display-tooltip-when-elided="true" name="text" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; font-size: 32px; color: rgba(255, 255, 255, 255);" />
                 </ui:GroupBox>
             </ui:GroupBox>
             <ui:VisualElement name="recipe-box">
-                <ui:Label text="hello world" display-tooltip-when-elided="true" name="recipe-text" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; font-size: 32px;" />
+                <ui:Label text="hello world" display-tooltip-when-elided="true" name="recipe-text" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; font-size: 32px; color: rgba(255, 255, 255, 255);" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

@@ -18,6 +18,8 @@ public class UserInterfaceController : MonoBehaviour
     public VisualElement hudScreen;
     public GroupBox statCorn;
     public Label statCornLabel;
+    public GroupBox statStrawb;
+    public Label statStrawbLabel;
 
     public VisualElement pickScreen;
     public Label nativeName;
@@ -51,16 +53,25 @@ public class UserInterfaceController : MonoBehaviour
         ingredientDict = new();
 
         Dictionary<string,string> freshCornNames = new();
-        freshCornNames["en"] = "Fresh Corn";
-        freshCornNames["mo"] = "Ohnawénha";
+        freshCornNames["en"] = "White corn";
+        freshCornNames["mo"] = "Onenhakén:ra";
         ingredientDict.Add(Collectable.IngredientType.freshCorn, freshCornNames);
+
+        Dictionary<string,string> strawbNames = new();
+        strawbNames["en"] = "Strawberries";
+        strawbNames["mo"] = "Ken'niiohontésha";
+        ingredientDict.Add(Collectable.IngredientType.strawberry, strawbNames);
 
         uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement;
 
         hudScreen = root.Query<VisualElement>("hud-screen").First();
+
         statCorn = hudScreen.Query<GroupBox>("stat-corn").First();
         statCornLabel = statCorn.Query<Label>("label").First();
+
+        statStrawb = hudScreen.Query<GroupBox>("stat-strawb").First();
+        statStrawbLabel = statStrawb.Query<Label>("label").First();
 
         pickScreen = root.Query<VisualElement>("pick-screen").First();
         nativeName = pickScreen.Query<Label>("native-name").First();
@@ -84,14 +95,24 @@ public class UserInterfaceController : MonoBehaviour
     void Update()
     {
         // HUD Handling
+
+        // fresh corn
         if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn) <= 0) {
             statCorn.style.display = DisplayStyle.None;
         }
         else {
             statCorn.style.display = DisplayStyle.Flex;
         }
-
         statCornLabel.text = PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn).ToString();
+
+        // strawberry
+        if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.strawberry) <= 0) {
+            statStrawb.style.display = DisplayStyle.None;
+        }
+        else {
+            statStrawb.style.display = DisplayStyle.Flex;
+        }
+        statStrawbLabel.text = PlayerManager.Instance.IngredientCount(Collectable.IngredientType.strawberry).ToString();
 
         // PickScreen Handling
         if (PlayerManager.Instance.ingredientInView == null) {

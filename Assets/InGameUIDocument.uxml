@@ -1,6 +1,24 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/ui.uss?fileID=7433441132597879392&amp;guid=5ba27aae0cc286542aca50dd97782a9c&amp;type=3#ui" />
     <ui:VisualElement name="container-screen">
+        <ui:VisualElement name="recipe-screen" style="width: 100%; height: 100%; background-color: rgb(53, 1, 1); justify-content: center; position: absolute; left: 0; top: 0; right: 0; opacity: 0;">
+            <ui:GroupBox name="recipe-visual">
+                <ui:GroupBox name="recipe-part-1">
+                    <ui:Label text="RECIPE VISUAL 1 " display-tooltip-when-elided="true" name="text" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; font-size: 32px; color: rgb(255, 255, 255);" />
+                </ui:GroupBox>
+                <ui:GroupBox name="recipe-part-2">
+                    <ui:Label text="RECIPE VISUAL 2" display-tooltip-when-elided="true" name="text" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; font-size: 32px; color: rgb(255, 255, 255);" />
+                </ui:GroupBox>
+            </ui:GroupBox>
+            <ui:VisualElement name="recipe-box">
+                <ui:Label text="hello world" display-tooltip-when-elided="true" name="recipe-text" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; font-size: 32px; color: rgb(255, 255, 255);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="dialogue-screen" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); justify-content: flex-end; position: absolute; left: 0; top: 0; right: 0; -unity-text-outline-color: rgba(0, 0, 0, 0);">
+            <ui:VisualElement name="dialogue-box" style="-unity-text-outline-width: 0; text-shadow: 1px 2px 1px rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0.52);">
+                <ui:Label text="I&apos;m Grandma! Here is some Grandma dialogue." display-tooltip-when-elided="true" name="dialogue-text" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px; font-size: 32px; -unity-font: url(&apos;project://database/Assets/Fonts/DarkerGrotesque-SemiBold.ttf?fileID=12800000&amp;guid=80c95bdde819e5447a81c1f2d52c345d&amp;type=3#DarkerGrotesque-SemiBold&apos;); color: rgb(255, 255, 255);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
         <ui:VisualElement name="pick-screen" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; opacity: 1;">
             <ui:VisualElement name="top-half" style="position: absolute; left: 0; top: 0; right: 0; bottom: 50%; align-items: center; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 30px;">
                 <ui:VisualElement name="gradient" class="gradient" style="background-image: url(&apos;project://database/Assets/Textures/UI/UI_gradient_top.png?fileID=2800000&amp;guid=d8576aa6cb19ef645a7003f70a28b9b1&amp;type=3#UI_gradient_top&apos;);" />
@@ -22,24 +40,6 @@
                     <ui:VisualElement name="icon" class="icon" style="background-image: url(&apos;project://database/Assets/Textures/UI/icon_strawb.png?fileID=21300000&amp;guid=f13a85ab70757a144a8221a16c2c237a&amp;type=3#icon_strawb&apos;);" />
                     <ui:Label text="3" display-tooltip-when-elided="true" name="label" class="label" style="color: rgb(255, 255, 255); text-shadow: 1px 2px 1px rgb(0, 0, 0);" />
                 </ui:GroupBox>
-            </ui:VisualElement>
-        </ui:VisualElement>
-        <ui:VisualElement name="dialogue-screen" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: flex-end; position: absolute; left: 0; top: 0; right: 0;">
-            <ui:VisualElement name="dialogue-box">
-                <ui:Label text="I&apos;m Grandma! Here is some Grandma dialogue." display-tooltip-when-elided="true" name="dialogue-text" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; font-size: 32px;" />
-            </ui:VisualElement>
-        </ui:VisualElement>
-        <ui:VisualElement name="recipe-screen" style="width: 100%; height: 100%; background-color: rgb(53, 1, 1); justify-content: center; position: absolute; left: 0; top: 0; right: 0;">
-            <ui:GroupBox name="recipe-visual">
-                <ui:GroupBox name="recipe-part-1">
-                    <ui:Label text="RECIPE VISUAL 1 " display-tooltip-when-elided="true" name="text" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; font-size: 32px; color: rgba(255, 255, 255, 255);" />
-                </ui:GroupBox>
-                <ui:GroupBox name="recipe-part-2">
-                    <ui:Label text="RECIPE VISUAL 2" display-tooltip-when-elided="true" name="text" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; font-size: 32px; color: rgba(255, 255, 255, 255);" />
-                </ui:GroupBox>
-            </ui:GroupBox>
-            <ui:VisualElement name="recipe-box">
-                <ui:Label text="hello world" display-tooltip-when-elided="true" name="recipe-text" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; font-size: 32px; color: rgba(255, 255, 255, 255);" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

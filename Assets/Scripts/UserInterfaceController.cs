@@ -62,6 +62,9 @@ public class UserInterfaceController : MonoBehaviour
         strawbNames["mo"] = "Ken'niiohontésha";
         ingredientDict.Add(Collectable.IngredientType.strawberry, strawbNames);
 
+        // Onon’tara osahe:ta = soup beans
+        // Salt pork
+
         uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement;
 
@@ -184,9 +187,13 @@ public class UserInterfaceController : MonoBehaviour
 
     public void OnStartGame() {
         dialogueQueue = new();
-        dialogueQueue.Enqueue("We're making corn soup today... Here's what you need to bring me...");
-        dialogueQueue.Enqueue("Some fresh corn...");
-        dialogueQueue.Enqueue("Some beans...");
+        dialogueQueue.Enqueue("Oh! There ya are, Grandchild. I was startin’ to wonder when you’d drag yourself outta bed and join me outside. Beautiful summer day, eh?");
+        dialogueQueue.Enqueue("Listen, tomorrow’s our big family get-together and we’ll be serving up my world-famous corn soup.");
+        dialogueQueue.Enqueue("The stuff is so famous that Buffy Sainte-Marie told my cousin’s auntie’s fourth husband that it was the best corn soup to ever hit her heavenly lips!");
+        dialogueQueue.Enqueue("Every year we make it from ingredients grown right here in my own garden. Now it's your turn to help your To'ta make the soup.");
+        dialogueQueue.Enqueue("So, listen: getgo get some corn, some beans, that nice cut of deer Uncle Matty left us");
+        dialogueQueue.Enqueue("And bring strawberries for a surprise...");
+        dialogueQueue.Enqueue("And bring strawberries for a surprise...");
         dialogueQueue.Enqueue("And bring strawberries for a surprise...");
         dialogueQueue.Enqueue("Off you go!");
     }

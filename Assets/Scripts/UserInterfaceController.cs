@@ -27,7 +27,7 @@ public class UserInterfaceController : MonoBehaviour
 
     public VisualElement dialogueScreen;
     public Label dialogueText;
-    public Queue<string> dialogueQueue;
+    private Queue<string> dialogueQueue;
 
     public VisualElement recipeScreen;
     public GroupBox recipeVisual;
@@ -92,6 +92,9 @@ public class UserInterfaceController : MonoBehaviour
         dialogueQueue = new();
 
         OnStartGame();
+
+        InputManager.Instance.anyButtonEvent.AddListener(AdvanceDialogue);
+        InputManager.Instance.anyButtonEvent.AddListener(AdvanceRecipe);
     }
 
     // Update is called once per frame
@@ -126,22 +129,86 @@ public class UserInterfaceController : MonoBehaviour
            nativeName.text = ingredientDict[PlayerManager.Instance.ingredientInView.type]["mo"];
            englishName.text = ingredientDict[PlayerManager.Instance.ingredientInView.type]["en"];
         }
+    }
 
+    public void OnPlayerApproachedDoor() {
+        ClearAndEnqueueDialogue("Let's see what you brought me...");
+        if (PlayerManager.Instance) {
+            if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn) > 0) {
+                EnqueueDialogue($"You have corn...");
+            }
+            else {
+                EnqueueDialogue($"You don't have any corn yet... Grab some from the cornfield...");
+            }
+        }
+    }
+
+    public void OnStartGame() {
+        dialogueQueue = new();
+        EnqueueDialogue("Oh! There ya are, Grandchild. I was startin’ to wonder when you’d drag yourself outta bed and join me outside. Beautiful summer day, eh?");
+        EnqueueDialogue("Listen, tomorrow’s our big family get-together and we’ll be serving up my world-famous corn soup.");
+        EnqueueDialogue("The stuff is so famous that Buffy Sainte-Marie told my cousin’s auntie’s fourth husband that it was the best corn soup to ever hit her heavenly lips!");
+        EnqueueDialogue("Every year we make it from ingredients grown right here in my own garden. Now it's your turn to help your To'ta make the soup.");
+        EnqueueDialogue("So, listen: go get some corn, beans, and the salt pork that Uncle Matty left us, and bring it all back here.");
+        EnqueueDialogue("And if you find any strawberries, pick those too, I have a surprise for you!");
+        EnqueueDialogue("Off you go!");
+    }
+
+    public void OnAllIngredientsRetrieved() {
+        recipeSequenceStarted = true;
+        recipeScreen.style.display = DisplayStyle.Flex;
+        ClearRecipes();
+        EnqueueRecipe(new Tuple<string,string>("Now we make the corn soup...","recipe-part-1"));
+        EnqueueRecipe(new Tuple<string,string>("Watch carefully...","recipe-part-2"));
+    }
+
+    private void AdvanceDialogue() {
+        Debug.Log("Advancing Dialogue");
+        string dialogue;
+        dialogueQueue.TryDequeue(out dialogue);
         if (dialogueQueue.Count > 0) {
             pickScreen.style.display = DisplayStyle.None;
             dialogueScreen.style.display = DisplayStyle.Flex;
             dialogueText.text = dialogueQueue.Peek();
 
-            if (Input.GetMouseButtonDown(0)) {
-                dialogueQueue.Dequeue();
-            }
+            PlayerMovement.Instance.ToggleMovement(false);
         }
         else {
             dialogueScreen.style.display = DisplayStyle.None;
             if (PlayerApproachedDoorWithAllIngredients && !recipeSequenceStarted) {
                 // OnAllIngredientsRetrieved();
             }
+            PlayerMovement.Instance.ToggleMovement(true);
         }
+    }
+
+    private void EnqueueDialogue(string dialogue) {
+        Debug.Log("Enqueue Dialogue");
+        dialogueQueue.Enqueue(dialogue);
+
+        pickScreen.style.display = DisplayStyle.None;
+        dialogueScreen.style.display = DisplayStyle.Flex;
+        dialogueText.text = dialogueQueue.Peek();
+
+        PlayerMovement.Instance.ToggleMovement(false);
+    }
+
+    private void ClearAndEnqueueDialogue(string dialogue) {
+        dialogueQueue.Clear();
+        EnqueueDialogue(dialogue);
+    }
+
+    private void EnqueueRecipe(Tuple<string, string> recipe) {
+        recipeQueue.Enqueue(recipe);
+
+        PlayerMovement.Instance.ToggleMovement(false);
+    }
+
+    private void AdvanceRecipe() {
+        Debug.Log(recipeQueue.Peek());
+        Tuple<string,string> recipe;
+        recipeQueue.TryDequeue(out recipe);
+        Debug.Log(recipeQueue.Peek());
 
         if (recipeQueue.Count > 0) {
             pickScreen.style.display = DisplayStyle.None;
@@ -158,51 +225,18 @@ public class UserInterfaceController : MonoBehaviour
                     element.style.display = DisplayStyle.None;
                 }
             }
-
-            if (Input.GetMouseButtonDown(0)) {
-                Debug.Log(recipeQueue.Peek());
-                recipeQueue.Dequeue();
-                Debug.Log(recipeQueue.Peek());
-            }
+            PlayerMovement.Instance.ToggleMovement(false);
         }
         else {
             if (recipeSequenceStarted) {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                PlayerMovement.Instance.ToggleMovement(false);
             }
         }
+
     }
 
-    public void OnPlayerApproachedDoor() {
-        dialogueQueue = new();
-        dialogueQueue.Enqueue("Let's see what you brought me...");
-        if (PlayerManager.Instance) {
-            if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn) > 0) {
-                dialogueQueue.Enqueue($"You have corn...");
-            }
-            else {
-                dialogueQueue.Enqueue($"You don't have any corn yet... Grab some from the cornfield...");
-            }
-        }
-    }
-
-    public void OnStartGame() {
-        dialogueQueue = new();
-        dialogueQueue.Enqueue("Oh! There ya are, Grandchild. I was startin’ to wonder when you’d drag yourself outta bed and join me outside. Beautiful summer day, eh?");
-        dialogueQueue.Enqueue("Listen, tomorrow’s our big family get-together and we’ll be serving up my world-famous corn soup.");
-        dialogueQueue.Enqueue("The stuff is so famous that Buffy Sainte-Marie told my cousin’s auntie’s fourth husband that it was the best corn soup to ever hit her heavenly lips!");
-        dialogueQueue.Enqueue("Every year we make it from ingredients grown right here in my own garden. Now it's your turn to help your To'ta make the soup.");
-        dialogueQueue.Enqueue("So, listen: getgo get some corn, some beans, that nice cut of deer Uncle Matty left us");
-        dialogueQueue.Enqueue("And bring strawberries for a surprise...");
-        dialogueQueue.Enqueue("And bring strawberries for a surprise...");
-        dialogueQueue.Enqueue("And bring strawberries for a surprise...");
-        dialogueQueue.Enqueue("Off you go!");
-    }
-
-    public void OnAllIngredientsRetrieved() {
-        recipeSequenceStarted = true;
-        recipeScreen.style.display = DisplayStyle.Flex;
-        recipeQueue = new();
-        recipeQueue.Enqueue(new Tuple<string,string>("Now we make the corn soup...","recipe-part-1"));
-        recipeQueue.Enqueue(new Tuple<string,string>("Watch carefully...","recipe-part-2"));
+    private void ClearRecipes() {
+        recipeQueue.Clear();
     }
 }

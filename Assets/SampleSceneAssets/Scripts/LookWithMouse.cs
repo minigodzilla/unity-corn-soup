@@ -19,8 +19,9 @@ public class LookWithMouse : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        LockPressed();
+
+        InputManager.Instance.clickEvent.AddListener(LockPressed);
     }
 
     // Update is called once per frame
@@ -38,11 +39,11 @@ public class LookWithMouse : MonoBehaviour
             mouseY += delta.y;
             lockPressed = Mouse.current.leftButton.wasPressedThisFrame || Mouse.current.rightButton.wasPressedThisFrame;
         }
-        if (Gamepad.current != null)
+        if (Joystick.current != null)
         {
-            var value = Gamepad.current.rightStick.ReadValue() * 2;
+            var value = Joystick.current.stick.ReadValue() * 4;
             mouseX += value.x;
-            mouseY += value.y;
+            mouseY += -value.y;
         }
         if (Keyboard.current != null)
         {
@@ -56,18 +57,12 @@ public class LookWithMouse : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * k_MouseSensitivityMultiplier;
 
         unlockPressed = Input.GetKeyDown(KeyCode.Escape);
-        lockPressed = Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1);
 #endif
 
         if (unlockPressed)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-        }
-        if (lockPressed)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
         }
 
         if (Cursor.lockState == CursorLockMode.Locked)
@@ -79,5 +74,10 @@ public class LookWithMouse : MonoBehaviour
 
             playerBody.Rotate(Vector3.up * mouseX);
         }
+    }
+
+    public void LockPressed() {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

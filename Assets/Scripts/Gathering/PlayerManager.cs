@@ -34,21 +34,14 @@ public class PlayerManager : MonoBehaviour
         }
         
         cameraTransform = Camera.main.transform;
+
+        InputManager.Instance.clickEvent.AddListener(OnClick);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (ingredientInView && Input.GetMouseButtonDown(0))
-        {
-            PickUp(ingredientInView);
-            ingredientInView = null;
-        }
-        else
-        {
-            CheckForCollectables();
-        }
-
+        CheckForCollectables();
         if (Vector3.Distance(transform.position,DoorGameObject.transform.position) < 3) {
             if (!approachedDoor) {
                 UserInterfaceController.Instance.OnPlayerApproachedDoor();
@@ -57,6 +50,14 @@ public class PlayerManager : MonoBehaviour
         }
         else if (Vector3.Distance(transform.position,DoorGameObject.transform.position) > 5) {
             approachedDoor = false;
+        }
+    }
+
+    private void OnClick() {
+        if (ingredientInView)
+        {
+            PickUp(ingredientInView);
+            ingredientInView = null;
         }
     }
 

@@ -18,6 +18,20 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
+    private static PlayerMovement _instance;
+    public static PlayerMovement Instance
+    {
+        get
+        {
+            if(_instance == null)
+            {
+                _instance = GameObject.FindObjectOfType<PlayerMovement>();
+            }
+
+            return _instance;
+        }
+    }
+
 
     Vector3 velocity;
     bool isGrounded;
@@ -28,18 +42,26 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        movement = new InputAction("PlayerMovement", binding: "<Gamepad>/leftStick");
+        movement = new InputAction("PlayerMovement", binding: "<Gamepad>/rightStick");
         movement.AddCompositeBinding("Dpad")
             .With("Up", "<Keyboard>/w")
             .With("Up", "<Keyboard>/upArrow")
+            .With("Up", "<Joystick>/button2")
             .With("Down", "<Keyboard>/s")
             .With("Down", "<Keyboard>/downArrow")
+            .With("Down", "<Joystick>/button6")
             .With("Left", "<Keyboard>/a")
             .With("Left", "<Keyboard>/leftArrow")
             .With("Right", "<Keyboard>/d")
             .With("Right", "<Keyboard>/rightArrow");
 
-        jump = new InputAction("PlayerJump", binding: "<Gamepad>/a");
+        movement.AddCompositeBinding("2DVector(mode=2)")
+            .With("Up", "<Gamepad>/leftStick/down")
+            .With("Down", "<Keyboard>/leftStick/up")
+            .With("Left", "<Keyboard>/leftStick/left")
+            .With("Right", "<Keyboard>/leftStick/right");
+
+        jump = new InputAction("PlayerJump", binding: "<Joystick>/button7");
         jump.AddBinding("<Keyboard>/space");
 
         movement.Enable();
@@ -48,18 +70,20 @@ public class PlayerMovement : MonoBehaviour
 
 #endif
 
+    public void ToggleMovement(bool enable) {
+        if (enable) {
+            movement?.Enable();
+            jump?.Enable();
+        }
+        else {
+            movement?.Disable();
+            jump?.Disable();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (UserInterfaceController.Instance.dialogueQueue.Count > 0) {
-            movement.Disable();
-            jump.Disable();
-        }
-        else {
-            movement.Enable();
-            jump.Enable();
-        }
-
         float x;
         float z;
         bool jumpPressed = false;

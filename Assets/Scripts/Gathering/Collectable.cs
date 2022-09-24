@@ -18,7 +18,8 @@ public class Collectable : MonoBehaviour
     private void Awake()
     {
         mr = GetComponentInChildren<MeshRenderer>();
-        defaultMaterial = mr.material;
+        if (mr != null) defaultMaterial = mr.material;
+        else { Debug.LogError($"Material for {gameObject.name} is null"); }
     }
 
     public void OnViewed()

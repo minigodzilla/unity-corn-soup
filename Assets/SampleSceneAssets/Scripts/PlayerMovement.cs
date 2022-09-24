@@ -56,10 +56,10 @@ public class PlayerMovement : MonoBehaviour
             .With("Right", "<Keyboard>/rightArrow");
 
         movement.AddCompositeBinding("2DVector(mode=2)")
-            .With("Up", "<Gamepad>/leftStick/down")
-            .With("Down", "<Keyboard>/leftStick/up")
-            .With("Left", "<Keyboard>/leftStick/left")
-            .With("Right", "<Keyboard>/leftStick/right");
+            .With("Up", "<Gamepad>/leftStick/up")
+            .With("Down", "<Gamepad>/leftStick/down")
+            .With("Left", "<Gamepad>/leftStick/left")
+            .With("Right", "<Gamepad>/leftStick/right");
 
         jump = new InputAction("PlayerJump", binding: "<Joystick>/button7");
         jump.AddBinding("<Keyboard>/space");

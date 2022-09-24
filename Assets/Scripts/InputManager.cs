@@ -28,6 +28,10 @@ public class InputManager : MonoBehaviour
 #if ENABLE_INPUT_SYSTEM
     InputAction click;
     InputAction anyButton;
+    InputAction up;
+    InputAction down;
+    InputAction left;
+    InputAction right;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +52,10 @@ public class InputManager : MonoBehaviour
         anyButton.AddBinding("<Joystick>/button10");
         anyButton.AddBinding("<Joystick>/button11");
         anyButton.AddBinding("<Joystick>/button12");
+        anyButton.AddBinding("<Mouse>/leftButton");
+        anyButton.AddBinding("<Gamepad>/rightTrigger");
+        anyButton.AddBinding("<Gamepad>/leftTrigger");
+        anyButton.AddBinding("<Gamepad>/button*");
         anyButton.performed += AnyButton;
         
         anyButton.Enable();

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class UserInterfaceController : MonoBehaviour
 {
@@ -14,6 +15,13 @@ public class UserInterfaceController : MonoBehaviour
 
     public UIDocument uiDocument;
     public VisualElement root;
+
+    public VisualElement titleScreen;
+    public Button startButton;
+    public Button creditsButton;
+
+    public VisualElement creditsScreen;
+    public Button returnToMenuButton;
 
     public VisualElement hudScreen;
     public GroupBox statCorn;
@@ -37,6 +45,27 @@ public class UserInterfaceController : MonoBehaviour
     public bool recipeSequenceStarted = false;
 
     public bool PlayerApproachedDoorWithAllIngredients = false;
+
+    private List<Button> titleScreenButtons = new List<Button>();
+    private List<Button> creditsScreenButtons = new List<Button>();
+
+    private int titleScreenButtonsIndex;
+    private int creditsScreenButtonsIndex;
+
+    public bool titleVisible
+    {
+        get {
+            return titleScreen.style.display == DisplayStyle.Flex;
+        }
+    }
+
+    public bool creditsVisible
+    {
+        get
+        {
+            return creditsScreen.style.display == DisplayStyle.Flex;
+        }
+    }
 
     private void Awake()
     {
@@ -73,6 +102,13 @@ public class UserInterfaceController : MonoBehaviour
         statCorn = hudScreen.Query<GroupBox>("stat-corn").First();
         statCornLabel = statCorn.Query<Label>("label").First();
 
+        titleScreen = root.Query<VisualElement>("title-screen").First();
+        startButton = titleScreen.Query<Button>("btn-start").First();
+        creditsButton = titleScreen.Query<Button>("btn-to-credits").First();
+
+        creditsScreen = root.Query<VisualElement>("credits-screen").First();
+        returnToMenuButton = creditsScreen.Query<Button>("btn-back").First();
+
         statStrawb = hudScreen.Query<GroupBox>("stat-strawb").First();
         statStrawbLabel = statStrawb.Query<Label>("label").First();
 
@@ -91,10 +127,26 @@ public class UserInterfaceController : MonoBehaviour
         recipeQueue = new();
         dialogueQueue = new();
 
-        OnStartGame();
-
         InputManager.Instance.anyButtonEvent.AddListener(AdvanceDialogue);
         InputManager.Instance.anyButtonEvent.AddListener(AdvanceRecipe);
+
+        titleScreen.style.display = DisplayStyle.Flex;
+
+        // Add listeners for title screen buttons
+        startButton.clicked += StartGame;
+        creditsButton.clicked += delegate { ToggleCredits(true); };
+        returnToMenuButton.clicked += delegate { ToggleCredits(false); };
+
+        InputManager.Instance.anyButtonEvent.AddListener(SelectMenuItem);
+
+        // Create list for title and credits screen buttons (for navigation)
+        titleScreenButtons.Add(startButton);
+        titleScreenButtons.Add(creditsButton);
+
+        creditsScreenButtons.Add(returnToMenuButton);
+
+        // Select first button in start screen
+        startButton.Focus();
     }
 
     // Update is called once per frame
@@ -143,7 +195,12 @@ public class UserInterfaceController : MonoBehaviour
         }
     }
 
-    public void OnStartGame() {
+    public void StartGame() {
+        // Hide title screen
+        titleScreen.style.display = DisplayStyle.None;
+
+        LookWithMouse.LockPressed();
+
         dialogueQueue = new();
         EnqueueDialogue("Oh! There ya are, Grandchild. I was startin’ to wonder when you’d drag yourself outta bed and join me outside. Beautiful summer day, eh?");
         EnqueueDialogue("Listen, tomorrow’s our big family get-together and we’ll be serving up my world-famous corn soup.");
@@ -152,6 +209,75 @@ public class UserInterfaceController : MonoBehaviour
         EnqueueDialogue("So, listen: go get some corn, beans, and the salt pork that Uncle Matty left us, and bring it all back here.");
         EnqueueDialogue("And if you find any strawberries, pick those too, I have a surprise for you!");
         EnqueueDialogue("Off you go!");
+    }
+
+    public void ToggleCredits(bool show)
+    {
+        if (show)
+        {
+            creditsScreen.style.display = DisplayStyle.Flex;
+            creditsScreenButtons[creditsScreenButtonsIndex].Focus();
+        }
+        else
+        {
+            creditsScreen.style.display = DisplayStyle.None;
+            titleScreenButtons[titleScreenButtonsIndex].Focus();
+        }
+    }
+
+    public void NextMenuItem()
+    {
+        if (titleVisible)
+        {
+            titleScreenButtonsIndex++;
+            if (titleScreenButtonsIndex >= titleScreenButtons.Count) titleScreenButtonsIndex = 0;
+
+            // Select next button
+            titleScreenButtons[titleScreenButtonsIndex].Focus();
+
+        }
+        else if (creditsVisible)
+        {
+            creditsScreenButtonsIndex++;
+            if (creditsScreenButtonsIndex >= creditsScreenButtons.Count) creditsScreenButtonsIndex = 0;
+
+            // Select next button
+            creditsScreenButtons[creditsScreenButtonsIndex].Focus();
+        }
+    }
+
+    public void PreviousMenuItem()
+    {
+        if (titleVisible)
+        {
+            titleScreenButtonsIndex--;
+            if (titleScreenButtonsIndex < 0) titleScreenButtonsIndex = titleScreenButtons.Count - 1;
+
+            // Select next button
+            titleScreenButtons[titleScreenButtonsIndex].Focus();
+
+        }
+        else if (creditsVisible)
+        {
+            creditsScreenButtonsIndex--;
+            if (creditsScreenButtonsIndex < 0) creditsScreenButtonsIndex = creditsScreenButtons.Count - 1;
+
+            // Select next button
+            creditsScreenButtons[creditsScreenButtonsIndex].Focus();
+        }
+    }
+
+    public void SelectMenuItem()
+    {
+        if (titleVisible)
+        {
+            titleScreenButtons[titleScreenButtonsIndex].HandleEvent(new MouseDownEvent());
+
+        }
+        else if (creditsVisible)
+        {
+            creditsScreenButtons[creditsScreenButtonsIndex].HandleEvent(new MouseDownEvent());
+        }
     }
 
     public void OnAllIngredientsRetrieved() {
@@ -205,10 +331,8 @@ public class UserInterfaceController : MonoBehaviour
     }
 
     private void AdvanceRecipe() {
-        Debug.Log(recipeQueue.Peek());
         Tuple<string,string> recipe;
         recipeQueue.TryDequeue(out recipe);
-        Debug.Log(recipeQueue.Peek());
 
         if (recipeQueue.Count > 0) {
             pickScreen.style.display = DisplayStyle.None;

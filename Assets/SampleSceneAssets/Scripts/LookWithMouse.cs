@@ -45,6 +45,12 @@ public class LookWithMouse : MonoBehaviour
             mouseX += value.x;
             mouseY += -value.y;
         }
+        if (Gamepad.current != null)
+        {
+            var value = Gamepad.current.rightStick.ReadValue() * 2;
+            mouseX += value.x;
+            mouseY += value.y;
+        }
         if (Keyboard.current != null)
         {
             unlockPressed = Keyboard.current.escapeKey.wasPressedThisFrame;
@@ -76,8 +82,11 @@ public class LookWithMouse : MonoBehaviour
         }
     }
 
-    public void LockPressed() {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+    public static void LockPressed() {
+        if (!UserInterfaceController.Instance.titleVisible)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 }

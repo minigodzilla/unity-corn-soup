@@ -1,6 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/ui.uss?fileID=7433441132597879392&amp;guid=5ba27aae0cc286542aca50dd97782a9c&amp;type=3#ui" />
     <ui:VisualElement name="container-screen">
+        <ui:VisualElement name="dialogue-screen" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); justify-content: center; position: absolute; left: 0; top: 0; right: 0; -unity-text-outline-color: rgba(0, 0, 0, 0);">
+            <ui:VisualElement name="dialogue-box" style="-unity-text-outline-width: 0; text-shadow: 1px 2px 1px rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0.71); margin-top: 25%;">
+                <ui:Label text="We&apos;re making corn soup today... Here&apos;s what you need to bring me:" display-tooltip-when-elided="true" name="dialogue-text" class="dialogue" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px; font-size: 36px; -unity-font: url(&apos;project://database/Assets/Fonts/DarkerGrotesque-SemiBold.ttf?fileID=12800000&amp;guid=80c95bdde819e5447a81c1f2d52c345d&amp;type=3#DarkerGrotesque-SemiBold&apos;); color: rgb(255, 255, 255); white-space: normal;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
         <ui:VisualElement name="recipe-screen" style="width: 100%; height: 100%; background-color: rgb(53, 1, 1); justify-content: center; position: absolute; left: 0; top: 0; right: 0; opacity: 0;">
             <ui:GroupBox name="recipe-visual">
                 <ui:GroupBox name="recipe-part-1">
@@ -22,12 +27,7 @@
             </ui:VisualElement>
             <ui:VisualElement name="bottom-half" style="position: absolute; left: 0; top: 50%; right: 0; bottom: 0; align-items: center; justify-content: flex-end; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 30px;">
                 <ui:VisualElement name="gradient" class="gradient" style="background-image: url(&apos;project://database/Assets/Textures/UI/UI_gradient_bottom.png?fileID=2800000&amp;guid=c743147d72eaffe418a856b7ec1b5526&amp;type=3#UI_gradient_bottom&apos;); opacity: 0.85;" />
-                <ui:Label name="cta" text="Push any button to collect" display-tooltip-when-elided="true" class="label" style="-unity-text-align: middle-center; height: 36px; -unity-font-definition: none; -unity-font-style: normal; letter-spacing: 0; color: rgb(255, 255, 255); text-shadow: 1px 2px 1px rgb(0, 0, 0); -unity-font: url(&apos;project://database/Assets/Fonts/DarkerGrotesque-Bold.ttf?fileID=12800000&amp;guid=56846325000338942b08c71ca8756499&amp;type=3#DarkerGrotesque-Bold&apos;); font-size: 36px;" />
-            </ui:VisualElement>
-        </ui:VisualElement>
-        <ui:VisualElement name="dialogue-screen" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); justify-content: center; position: absolute; left: 0; top: 0; right: 0; -unity-text-outline-color: rgba(0, 0, 0, 0);">
-            <ui:VisualElement name="dialogue-box" style="-unity-text-outline-width: 0; text-shadow: 1px 2px 1px rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0.71); margin-top: 25%;">
-                <ui:Label text="We&apos;re making corn soup today... Here&apos;s what you need to bring me:" display-tooltip-when-elided="true" name="dialogue-text" class="dialogue" style="padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px; font-size: 36px; -unity-font: url(&apos;project://database/Assets/Fonts/DarkerGrotesque-SemiBold.ttf?fileID=12800000&amp;guid=80c95bdde819e5447a81c1f2d52c345d&amp;type=3#DarkerGrotesque-SemiBold&apos;); color: rgb(255, 255, 255); white-space: normal;" />
+                <ui:Label name="cta" text="Use PICK to collect" display-tooltip-when-elided="true" class="label" style="-unity-text-align: middle-center; height: 36px; -unity-font-definition: none; -unity-font-style: normal; letter-spacing: 0; color: rgb(255, 255, 255); text-shadow: 1px 2px 1px rgb(0, 0, 0); -unity-font: url(&apos;project://database/Assets/Fonts/DarkerGrotesque-Bold.ttf?fileID=12800000&amp;guid=56846325000338942b08c71ca8756499&amp;type=3#DarkerGrotesque-Bold&apos;); font-size: 36px;" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="hud-screen" style="position: absolute; left: 0; top: 0; right: 0; bottom: 1px; flex-direction: row; align-items: flex-end; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 30px;">
@@ -42,16 +42,16 @@
                 </ui:GroupBox>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="title-screen" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; opacity: 1; background-color: rgb(63, 4, 4); justify-content: center;">
-            <ui:Label text="Onhnésto" display-tooltip-when-elided="true" name="game-title" class="label" style="-unity-font: url(&apos;project://database/Assets/Fonts/DarkerGrotesque-Bold.ttf?fileID=12800000&amp;guid=56846325000338942b08c71ca8756499&amp;type=3#DarkerGrotesque-Bold&apos;); font-size: 96px; height: auto; -unity-text-align: lower-center; letter-spacing: 0.25px; color: rgb(255, 255, 255); text-shadow: 1px 2px 1px rgb(0, 0, 0); -unity-text-outline-color: rgba(0, 0, 0, 0.83);" />
-            <ui:Label text="Corn Soup" display-tooltip-when-elided="true" name="game-subtitle" class="label" style="-unity-font: url(&apos;project://database/Assets/Fonts/DarkerGrotesque-Medium.ttf?fileID=12800000&amp;guid=be2f8ca40f3015448bca58748f47c95e&amp;type=3#DarkerGrotesque-Medium&apos;); font-size: 48px; height: auto; -unity-text-align: lower-center; letter-spacing: 0.25px; color: rgb(255, 255, 255); text-shadow: 1px 2px 1px rgb(0, 0, 0); -unity-text-outline-color: rgba(0, 0, 0, 0.83); margin-bottom: 100px;" />
-            <ui:Button text="Start Game" display-tooltip-when-elided="true" name="btn-start" style="font-size: 36px; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 0; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" />
-            <ui:Button text="Credits" display-tooltip-when-elided="true" name="btn-to-credits" style="margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px; font-size: 36px; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" />
+        <ui:VisualElement name="title-screen" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; opacity: 1; background-color: rgb(63, 4, 4); justify-content: center; display: flex; align-items: stretch;">
+            <ui:Label text="Onénhsto" display-tooltip-when-elided="true" name="game-title" class="label" style="-unity-font: url(&apos;project://database/Assets/Fonts/DarkerGrotesque-Bold.ttf?fileID=12800000&amp;guid=56846325000338942b08c71ca8756499&amp;type=3#DarkerGrotesque-Bold&apos;); font-size: 120px; height: auto; -unity-text-align: lower-center; letter-spacing: 0.25px; color: rgb(255, 255, 255); text-shadow: 1px 2px 1px rgb(0, 0, 0); -unity-text-outline-color: rgba(0, 0, 0, 0.83);" />
+            <ui:Label text="Corn Soup" display-tooltip-when-elided="true" name="game-subtitle" class="label" style="-unity-font: url(&apos;project://database/Assets/Fonts/DarkerGrotesque-Medium.ttf?fileID=12800000&amp;guid=be2f8ca40f3015448bca58748f47c95e&amp;type=3#DarkerGrotesque-Medium&apos;); font-size: 48px; height: auto; -unity-text-align: lower-center; letter-spacing: 0.25px; color: rgb(255, 255, 255); text-shadow: 1px 2px 1px rgb(0, 0, 0); -unity-text-outline-color: rgba(0, 0, 0, 0.83); margin-bottom: 160px; margin-top: -20px;" />
+            <ui:Button text="Start Game" display-tooltip-when-elided="true" name="btn-start" />
+            <ui:Button text="Credits" display-tooltip-when-elided="true" name="btn-to-credits" />
         </ui:VisualElement>
         <ui:VisualElement name="credits-screen" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; opacity: 1; background-color: rgb(4, 11, 63); justify-content: center; visibility: visible; display: none;">
             <ui:Label text="Credits" display-tooltip-when-elided="true" name="credits-title" class="label" style="-unity-font: url(&apos;project://database/Assets/Fonts/DarkerGrotesque-Bold.ttf?fileID=12800000&amp;guid=56846325000338942b08c71ca8756499&amp;type=3#DarkerGrotesque-Bold&apos;); font-size: 96px; height: auto; -unity-text-align: lower-center; letter-spacing: 0.25px; color: rgb(255, 255, 255); text-shadow: 1px 2px 1px rgb(0, 0, 0); -unity-text-outline-color: rgba(0, 0, 0, 0.83);" />
             <ui:Label text="Credits will appear here\nARIC IS TEH BEST" display-tooltip-when-elided="true" name="credits-text" class="label" style="-unity-font: url(&apos;project://database/Assets/Fonts/DarkerGrotesque-Medium.ttf?fileID=12800000&amp;guid=be2f8ca40f3015448bca58748f47c95e&amp;type=3#DarkerGrotesque-Medium&apos;); font-size: 48px; height: auto; -unity-text-align: lower-center; letter-spacing: 0.25px; color: rgb(255, 255, 255); text-shadow: 1px 2px 1px rgb(0, 0, 0); -unity-text-outline-color: rgba(0, 0, 0, 0.83); margin-bottom: 100px;" />
-            <ui:Button text="Back to Menu" display-tooltip-when-elided="true" name="btn-back" style="font-size: 36px; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 0; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" />
+            <ui:Button text="Back to Menu" display-tooltip-when-elided="true" name="btn-back" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

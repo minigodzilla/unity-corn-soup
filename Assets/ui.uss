@@ -31,16 +31,11 @@
     padding: 0;
 }
 
-#container-stats .unity-group-box .icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-}
-
-#container-stats .unity-group-box .label {
-    -unity-font-weight: bold;
-    -unity-font-style: bold;
-    -unity-font-definition: none;
+.icon {
+    width: 64px;
+    height: 64px;
+    margin-right: 6px;
+    margin-left: 6px;
 }
 
 #pick-screen #bottom-half #cta {

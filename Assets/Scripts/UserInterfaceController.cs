@@ -24,10 +24,14 @@ public class UserInterfaceController : MonoBehaviour
     public Button returnToMenuButton;
 
     public VisualElement hudScreen;
-    public GroupBox statCorn;
-    public Label statCornLabel;
-    public GroupBox statStrawb;
-    public Label statStrawbLabel;
+    public VisualElement statFreshCorn;
+    public VisualElement statDriedCorn;
+    public VisualElement statFreshBeans;
+    public VisualElement statDriedBeans;
+    public VisualElement statAsh;
+    public VisualElement statStrawberry;
+    public VisualElement statVenison;
+    public VisualElement statRecipeBook;
 
     public VisualElement pickScreen;
     public Label nativeName;
@@ -99,8 +103,14 @@ public class UserInterfaceController : MonoBehaviour
 
         hudScreen = root.Query<VisualElement>("hud-screen").First();
 
-        statCorn = hudScreen.Query<GroupBox>("stat-corn").First();
-        statCornLabel = statCorn.Query<Label>("label").First();
+        statFreshCorn = hudScreen.Query<VisualElement>("stat-freshCorn").First();
+        statDriedCorn = hudScreen.Query<VisualElement>("stat-driedCorn").First();
+        statFreshBeans = hudScreen.Query<VisualElement>("stat-freshBeans").First();
+        statDriedBeans = hudScreen.Query<VisualElement>("stat-driedBeans").First();
+        statAsh = hudScreen.Query<VisualElement>("stat-ash").First();
+        statStrawberry = hudScreen.Query<VisualElement>("stat-strawberry").First();
+        statVenison = hudScreen.Query<VisualElement>("stat-venison").First();
+        statRecipeBook = hudScreen.Query<VisualElement>("stat-recipeBook").First();
 
         titleScreen = root.Query<VisualElement>("title-screen").First();
         startButton = titleScreen.Query<Button>("btn-start").First();
@@ -108,9 +118,6 @@ public class UserInterfaceController : MonoBehaviour
 
         creditsScreen = root.Query<VisualElement>("credits-screen").First();
         returnToMenuButton = creditsScreen.Query<Button>("btn-back").First();
-
-        statStrawb = hudScreen.Query<GroupBox>("stat-strawb").First();
-        statStrawbLabel = statStrawb.Query<Label>("label").First();
 
         pickScreen = root.Query<VisualElement>("pick-screen").First();
         nativeName = pickScreen.Query<Label>("native-name").First();
@@ -155,23 +162,62 @@ public class UserInterfaceController : MonoBehaviour
     {
         // HUD Handling
 
-        // fresh corn
-        if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn) <= 0) {
-            statCorn.style.display = DisplayStyle.None;
+        if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn) == 0) {
+            statFreshCorn.style.display = DisplayStyle.None;
         }
         else {
-            statCorn.style.display = DisplayStyle.Flex;
+            statFreshCorn.style.display = DisplayStyle.Flex;
         }
-        statCornLabel.text = PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn).ToString();
 
-        // strawberry
-        if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.strawberry) <= 0) {
-            statStrawb.style.display = DisplayStyle.None;
+        if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.driedCorn) == 0) {
+            statDriedCorn.style.display = DisplayStyle.None;
         }
         else {
-            statStrawb.style.display = DisplayStyle.Flex;
+            statDriedCorn.style.display = DisplayStyle.Flex;
         }
-        statStrawbLabel.text = PlayerManager.Instance.IngredientCount(Collectable.IngredientType.strawberry).ToString();
+
+        if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshBeans) == 0) {
+            statFreshBeans.style.display = DisplayStyle.None;
+        }
+        else {
+            statFreshBeans.style.display = DisplayStyle.Flex;
+        }
+
+        if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.driedBeans) == 0) {
+            statDriedBeans.style.display = DisplayStyle.None;
+        }
+        else {
+            statDriedBeans.style.display = DisplayStyle.Flex;
+        }
+
+        if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.ash) == 0) {
+            statAsh.style.display = DisplayStyle.None;
+        }
+        else {
+            statAsh.style.display = DisplayStyle.Flex;
+        }
+
+        if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.strawberry) == 0) {
+            statStrawberry.style.display = DisplayStyle.None;
+        }
+        else {
+            statStrawberry.style.display = DisplayStyle.Flex;
+        }
+
+        if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.venison) == 0) {
+            statVenison.style.display = DisplayStyle.None;
+        }
+        else {
+            statVenison.style.display = DisplayStyle.Flex;
+        }
+
+        if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.recipeBook) == 0) {
+            statRecipeBook.style.display = DisplayStyle.None;
+        }
+        else {
+            statRecipeBook.style.display = DisplayStyle.Flex;
+        }
+
 
         // PickScreen Handling
         if (PlayerManager.Instance.ingredientInView == null) {

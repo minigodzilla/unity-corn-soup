@@ -34,8 +34,8 @@
 .icon {
     width: 64px;
     height: 64px;
-    margin-right: 6px;
-    margin-left: 6px;
+    margin-right: 7px;
+    margin-left: 7px;
 }
 
 #pick-screen #bottom-half #cta {

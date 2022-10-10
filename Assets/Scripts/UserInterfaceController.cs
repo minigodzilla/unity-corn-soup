@@ -259,6 +259,7 @@ public class UserInterfaceController : MonoBehaviour
             || PlayerManager.Instance.IngredientCount(Collectable.IngredientType.driedCorn) > 0
             || PlayerManager.Instance.IngredientCount(Collectable.IngredientType.driedBeans) > 0
             || PlayerManager.Instance.IngredientCount(Collectable.IngredientType.ash) > 0
+            || PlayerManager.Instance.IngredientCount(Collectable.IngredientType.strawberry) > 0
             || PlayerManager.Instance.IngredientCount(Collectable.IngredientType.venison) > 0
             || PlayerManager.Instance.IngredientCount(Collectable.IngredientType.recipeBook) > 0
         ) {
@@ -356,37 +357,42 @@ public class UserInterfaceController : MonoBehaviour
     }
 
     public void OnPlayerApproachedDoor() {
-        ClearAndEnqueueDialogue("Let's see what you brought me...");
         if (PlayerManager.Instance) {
             if (playerHasAllIngredients()) {
+                ClearAndEnqueueDialogue("Let's see what you brought me...");
                 EnqueueDialogue($"You found all ingredients AND strawberries! You get to learn how to make soup AND juice!");
                 return;
             }
             if (playerHasAllIngredientsExceptStrawberries()) {
+                ClearAndEnqueueDialogue("Let's see what you brought me...");
                 EnqueueDialogue($"You found all ingredients! You get to learn how to make soup AND juice!");
                 return;
             }
             if (playerHasSomeDryIngredients()) {
-                EnqueueDialogue($"You have at least one dry ingredient.");
+                ClearAndEnqueueDialogue($"Grandchild! We need dried corn\n*and* dried beans! Go back and\nmake sure you have both!");
                 return;
             }
             if (playerHasNoDryIngredients()) {
-                EnqueueDialogue($"You have all the fresh ingredients and the recipe book, but no dry ingredients.");
+                ClearAndEnqueueDialogue($"Oh, you silly grandchild! When I said\nget some corn and beans, I meant\nget some *dried* corn and beans!");
+                EnqueueDialogue($"Go grab some of the dried corn and\nbeans that I keep over by the shed.");
+                EnqueueDialogue($"Hurry up! I'm almost ready to make\nthe soup!");
                 return;
             }
             if (playerHasAllFreshIngredientsButNoRecipeBook()) {
-                EnqueueDialogue($"You have all the fresh ingredients, but no recipe book!");
+                ClearAndEnqueueDialogue($"Oh, good, you found more\ningredients.\n\nBut we can't get cookin' without\nthat recipe book!");
+                EnqueueDialogue($"Follow that pup's footsteps! I think\nI saw him hanging around the fire pit\na minute ago.");
                 return;
             }
             if (playerHasAtLeastOneIngredient()) {
-                EnqueueDialogue($"That's a good start, but where's the rest?");
-                EnqueueDialogue($"Take a good look around the garden and around back. Come back when you have everything!");
-                EnqueueDialogue($"And don't forget the cookbook! Where did that pup run off with it?");
+                ClearAndEnqueueDialogue($"That's a good start, but where's the\nrest?");
+                EnqueueDialogue($"Take a good look around the garden\nand around back. Don't come back\nuntil you have everything!");
+                EnqueueDialogue($"And don't forget the cookbook!\nWhere did that pup run off with it?");
                 return;
             }
             if(playerHasNothing()) {
+                ClearAndEnqueueDialogue("Let's see what you brought me...");
                 EnqueueDialogue($"You didn't pick anything!");
-                EnqueueDialogue($"Don't be lazy like your brother! Go grab what we need for our soup! Hurry!");
+                EnqueueDialogue($"Don't be lazy like your brother! Go\ngrab what we need for our soup!\nHurry!");
                 return;
             }
         }
@@ -403,7 +409,8 @@ public class UserInterfaceController : MonoBehaviour
         EnqueueDialogue("Tomorrow’s our big family get-\ntogether and we’ll be serving up\nmy world-famous corn soup.");
         EnqueueDialogue("The stuff is so famous that Buffy\nSainte-Marie told my cousin’s\nauntie’s fourth husband that it was\nthe best corn soup to ever hit her\nheavenly lips!");
         EnqueueDialogue("Every year we make it with\ningredients from right here in my\ngarden.\n\nNow it’s your turn to help me make\nthe soup!");
-        EnqueueDialogue("So, listen: go get some corn,\nbeans, and the salt pork that Uncle\nMatty left us, and bring it all back\nhere for your To’ta.");
+        EnqueueDialogue("So, listen: go get some corn,\nbeans, the salt pork that Uncle\nMatty left us, and then scoop some\nash from the fire pit.");
+        EnqueueDialogue("Bring all that stuff back here for\nyour To’ta.");
         EnqueueDialogue("And hurry up! Making my delicious\ncorn soup takes all day.\n\nWe got the whole family coming\nlater, and you know how hangry\nyour cousins can get...");
         EnqueueDialogue("Now, where did I put that recipe\nbook..?");
         EnqueueDialogue("GYAH! GONE!! It was just here a\nsecond ago!");

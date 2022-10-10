@@ -131,6 +131,7 @@ public class UserInterfaceController : MonoBehaviour
         InputManager.Instance.anyButtonEvent.AddListener(AdvanceRecipe);
 
         titleScreen.style.display = DisplayStyle.Flex;
+        creditsScreen.style.display = DisplayStyle.None;
 
         // Add listeners for title screen buttons
         startButton.clicked += StartGame;
@@ -183,14 +184,164 @@ public class UserInterfaceController : MonoBehaviour
         }
     }
 
+    // FRESH INGREDIENTS: freshCorn, freshBeans, ash, venison
+    // DRY INGREDIENTS: dryCorn, dryBeans
+    // recipeBook
+    // strawberry
+
+    public bool playerHasNothing() {
+        if(
+            PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn) == 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshBeans) == 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.driedCorn) == 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.driedBeans) == 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.ash) == 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.strawberry) == 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.venison) == 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.recipeBook) == 0
+        ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public bool playerHasAtLeastOneIngredient() {
+        if(
+            PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn) > 0
+            || PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshBeans) > 0
+            || PlayerManager.Instance.IngredientCount(Collectable.IngredientType.driedCorn) > 0
+            || PlayerManager.Instance.IngredientCount(Collectable.IngredientType.driedBeans) > 0
+            || PlayerManager.Instance.IngredientCount(Collectable.IngredientType.ash) > 0
+            || PlayerManager.Instance.IngredientCount(Collectable.IngredientType.venison) > 0
+            || PlayerManager.Instance.IngredientCount(Collectable.IngredientType.recipeBook) > 0
+        ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public bool playerHasAllFreshIngredientsButNoRecipeBook() {
+        if(
+            PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshBeans) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.ash) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.venison) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.recipeBook) == 0
+        ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    // at this point we assume player has all fresh ingredients and the recipe book
+
+    public bool playerHasNoDryIngredients() {
+        if(
+            PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshBeans) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.ash) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.venison) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.recipeBook) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.driedCorn) == 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.driedBeans) == 0
+        ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public bool playerHasSomeDryIngredients() {
+        if(
+            PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshBeans) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.ash) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.venison) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.recipeBook) > 0
+        ) {
+            if(
+                PlayerManager.Instance.IngredientCount(Collectable.IngredientType.driedCorn) > 0
+                || PlayerManager.Instance.IngredientCount(Collectable.IngredientType.driedBeans) > 0
+            ) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+        return false;
+        }
+    }
+
+    public bool playerHasAllIngredientsExceptStrawberries() {
+        if(
+            PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshBeans) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.ash) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.venison) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.recipeBook) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.driedCorn) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.driedBeans) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.strawberry) == 0
+        ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public bool playerHasAllIngredients() {
+        if(
+            PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshBeans) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.ash) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.venison) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.recipeBook) > 0
+            &&PlayerManager.Instance.IngredientCount(Collectable.IngredientType.driedCorn) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.driedBeans) > 0
+            && PlayerManager.Instance.IngredientCount(Collectable.IngredientType.strawberry) > 0
+        ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public void OnPlayerApproachedDoor() {
         ClearAndEnqueueDialogue("Let's see what you brought me...");
         if (PlayerManager.Instance) {
-            if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn) > 0) {
-                EnqueueDialogue($"You have corn...");
+            if (playerHasAllIngredients()) {
+                EnqueueDialogue($"You found all ingredients AND strawberries! You get to learn how to make soup AND juice!");
+                return;
             }
-            else {
-                EnqueueDialogue($"You don't have any corn yet... Grab some from the cornfield...");
+            if (playerHasAllIngredientsExceptStrawberries()) {
+                EnqueueDialogue($"You found all ingredients! You get to learn how to make soup AND juice!");
+                return;
+            }
+            if (playerHasSomeDryIngredients()) {
+                EnqueueDialogue($"You have at least one dry ingredient.");
+                return;
+            }
+            if (playerHasNoDryIngredients()) {
+                EnqueueDialogue($"You have all the fresh ingredients and the recipe book, but no dry ingredients.");
+                return;
+            }
+            if (playerHasAllFreshIngredientsButNoRecipeBook()) {
+                EnqueueDialogue($"You have all the fresh ingredients, but no recipe book!");
+                return;
+            }
+            if (playerHasAtLeastOneIngredient()) {
+                EnqueueDialogue($"That's a good start, but where's the rest?");
+                EnqueueDialogue($"Take a good look around the garden and around back. Come back when you have everything!");
+                EnqueueDialogue($"And don't forget the cookbook! Where did that pup run off with it?");
+                return;
+            }
+            if(playerHasNothing()) {
+                EnqueueDialogue($"You didn't pick anything!");
+                EnqueueDialogue($"Don't be lazy like your brother! Go grab what we need for our soup! Hurry!");
+                return;
             }
         }
     }
@@ -202,12 +353,19 @@ public class UserInterfaceController : MonoBehaviour
         LookWithMouse.LockPressed();
 
         dialogueQueue = new();
-        EnqueueDialogue("Oh! There ya are, Grandchild. I was startin’ to wonder when you’d drag yourself outta bed and join me outside. Beautiful summer day, eh?");
-        EnqueueDialogue("Listen, tomorrow’s our big family get-together and we’ll be serving up my world-famous corn soup.");
-        EnqueueDialogue("The stuff is so famous that Buffy Sainte-Marie told my cousin’s auntie’s fourth husband that it was the best corn soup to ever hit her heavenly lips!");
-        EnqueueDialogue("Every year we make it from ingredients grown right here in my own garden. Now it's your turn to help your To'ta make the soup.");
-        EnqueueDialogue("So, listen: go get some corn, beans, and the salt pork that Uncle Matty left us, and bring it all back here.");
-        EnqueueDialogue("And if you find any strawberries, pick those too, I have a surprise for you!");
+        EnqueueDialogue("Oh! There ya are, Grandchild.\nI was startin’ to wonder when\nyou’d drag yourself outta bed and\njoin me outside.\n\nBeautiful summer day, eh?");
+        EnqueueDialogue("Tomorrow’s our big family get-\ntogether and we’ll be serving up\nmy world-famous corn soup.");
+        EnqueueDialogue("The stuff is so famous that Buffy\nSainte-Marie told my cousin’s\nauntie’s fourth husband that it was\nthe best corn soup to ever hit her\nheavenly lips!");
+        EnqueueDialogue("Every year we make it with\ningredients from right here in my\ngarden.\n\nNow it’s your turn to help me make\nthe soup!");
+        EnqueueDialogue("So, listen: go get some corn,\nbeans, and the salt pork that Uncle\nMatty left us, and bring it all back\nhere for your To’ta.");
+        EnqueueDialogue("And hurry up! Making my delicious\ncorn soup takes all day.\n\nWe got the whole family coming\nlater, and you know how hangry\nyour cousins can get...");
+        EnqueueDialogue("Now, where did I put that recipe\nbook..?");
+        EnqueueDialogue("GYAH! GONE!! It was just here a\nsecond ago!");
+        EnqueueDialogue("Ohhh. Y’know what? Owí:ra the rez\npup was sniffin’ around here a few\nminutes ago. I saw him saunterin’\noff into the woods carryin’\nsomethin’ with a smirk.");
+        EnqueueDialogue("Figured it was just a bone\nhe wanted to bury somewhere for\nchewin’ on later.");
+        EnqueueDialogue("I’ll bet my bingo winnings that he\ntook the recipe book!");
+        EnqueueDialogue("Anywho! I’ll need to finish preppin’\nin the kitchen. Could ya be a dear\nand go look for that recipe book in\nthe woods while you’re out there?");
+        EnqueueDialogue("Oh, and it’s strawberry season...\n\nIf you find any, bring ’em back here\ntoo, I have a surprise for you!");
         EnqueueDialogue("Off you go!");
     }
 

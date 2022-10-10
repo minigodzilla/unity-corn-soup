@@ -115,10 +115,15 @@ public class UserInterfaceController : MonoBehaviour
         strawberryNames["mo"] = "Ken'niiohontésha";
         ingredientDict.Add(Collectable.IngredientType.strawberry, strawberryNames);
 
+        Dictionary<string,string> venisonNames = new();
+        venisonNames["en"] = "Pork";
+        venisonNames["mo"] = "Kwéskwes o’wá:ron";
+        ingredientDict.Add(Collectable.IngredientType.venison, venisonNames);
+
         Dictionary<string,string> recipeBookNames = new();
         recipeBookNames["en"] = "Recipe book";
         recipeBookNames["mo"] = "Kahiatón’sera ...";
-        ingredientDict.Add(Collectable.IngredientType.venison, recipeBookNames);
+        ingredientDict.Add(Collectable.IngredientType.recipeBook, recipeBookNames);
 
         uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement;

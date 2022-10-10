@@ -90,13 +90,35 @@ public class UserInterfaceController : MonoBehaviour
         freshCornNames["mo"] = "Onenhakén:ra";
         ingredientDict.Add(Collectable.IngredientType.freshCorn, freshCornNames);
 
-        Dictionary<string,string> strawbNames = new();
-        strawbNames["en"] = "Strawberries";
-        strawbNames["mo"] = "Ken'niiohontésha";
-        ingredientDict.Add(Collectable.IngredientType.strawberry, strawbNames);
+        Dictionary<string,string> driedCornNames = new();
+        driedCornNames["en"] = "Dried corn";
+        driedCornNames["mo"] = "Kanenhathà:ton";
+        ingredientDict.Add(Collectable.IngredientType.driedCorn, driedCornNames);
 
-        // Onon’tara osahe:ta = soup beans
-        // Salt pork
+        Dictionary<string,string> freshBeansNames = new();
+        freshBeansNames["en"] = "String beans";
+        freshBeansNames["mo"] = "O’rhótsheri";
+        ingredientDict.Add(Collectable.IngredientType.freshBeans, freshBeansNames);
+
+        Dictionary<string,string> driedBeansNames = new();
+        driedBeansNames["en"] = "Dry beans (for soup)";
+        driedBeansNames["mo"] = "Onon’tara osahe:ta";
+        ingredientDict.Add(Collectable.IngredientType.driedBeans, driedBeansNames);
+
+        Dictionary<string,string> ashNames = new();
+        ashNames["en"] = "Ashes";
+        ashNames["mo"] = "O’kèn:ra";
+        ingredientDict.Add(Collectable.IngredientType.ash, ashNames);
+
+        Dictionary<string,string> strawberryNames = new();
+        strawberryNames["en"] = "Strawberries";
+        strawberryNames["mo"] = "Ken'niiohontésha";
+        ingredientDict.Add(Collectable.IngredientType.strawberry, strawberryNames);
+
+        Dictionary<string,string> recipeBookNames = new();
+        recipeBookNames["en"] = "Recipe book";
+        recipeBookNames["mo"] = "Kahiatón’sera ...";
+        ingredientDict.Add(Collectable.IngredientType.venison, recipeBookNames);
 
         uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement;

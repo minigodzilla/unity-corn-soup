@@ -6,7 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance { get; private set; }
 
-    public float pickupRange = 3;
+    public float pickupRange = 6;
 
     private Transform cameraTransform;
 

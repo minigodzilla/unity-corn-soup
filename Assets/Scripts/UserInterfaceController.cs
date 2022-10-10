@@ -365,7 +365,7 @@ public class UserInterfaceController : MonoBehaviour
             }
             if (playerHasAllIngredientsExceptStrawberries()) {
                 ClearAndEnqueueDialogue("Let's see what you brought me...");
-                EnqueueDialogue($"You found all ingredients! You get to learn how to make soup AND juice!");
+                EnqueueDialogue($"You found all ingredients! You get to learn how to make the soup!");
                 return;
             }
             if (playerHasSomeDryIngredients()) {

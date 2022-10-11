@@ -18,10 +18,13 @@ public class UserInterfaceController : MonoBehaviour
 
     public VisualElement titleScreen;
     public Button startButton;
+    public Button aboutButton;
     public Button creditsButton;
 
+    public VisualElement aboutScreen;
     public VisualElement creditsScreen;
-    public Button returnToMenuButton;
+    public Button aboutReturnToMenuButton;
+    public Button creditsReturnToMenuButton;
 
     public VisualElement hudScreen;
     public VisualElement statFreshCorn;
@@ -51,15 +54,25 @@ public class UserInterfaceController : MonoBehaviour
     public bool PlayerApproachedDoorWithAllIngredients = false;
 
     private List<Button> titleScreenButtons = new List<Button>();
+    private List<Button> aboutScreenButtons = new List<Button>();
     private List<Button> creditsScreenButtons = new List<Button>();
 
     private int titleScreenButtonsIndex;
+    private int aboutScreenButtonsIndex;
     private int creditsScreenButtonsIndex;
 
     public bool titleVisible
     {
         get {
             return titleScreen.style.display == DisplayStyle.Flex;
+        }
+    }
+
+    public bool aboutVisible
+    {
+        get
+        {
+            return aboutScreen.style.display == DisplayStyle.Flex;
         }
     }
 
@@ -141,10 +154,13 @@ public class UserInterfaceController : MonoBehaviour
 
         titleScreen = root.Query<VisualElement>("title-screen").First();
         startButton = titleScreen.Query<Button>("btn-start").First();
+        aboutButton = titleScreen.Query<Button>("btn-to-about").First();
         creditsButton = titleScreen.Query<Button>("btn-to-credits").First();
 
+        aboutScreen = root.Query<VisualElement>("about-screen").First();
         creditsScreen = root.Query<VisualElement>("credits-screen").First();
-        returnToMenuButton = creditsScreen.Query<Button>("btn-back").First();
+        aboutReturnToMenuButton = aboutScreen.Query<Button>("btn-back").First();
+        creditsReturnToMenuButton = creditsScreen.Query<Button>("btn-back").First();
 
         pickScreen = root.Query<VisualElement>("pick-screen").First();
         nativeName = pickScreen.Query<Label>("native-name").First();
@@ -165,20 +181,26 @@ public class UserInterfaceController : MonoBehaviour
         InputManager.Instance.anyButtonEvent.AddListener(AdvanceRecipe);
 
         titleScreen.style.display = DisplayStyle.Flex;
+        aboutScreen.style.display = DisplayStyle.None;
         creditsScreen.style.display = DisplayStyle.None;
 
         // Add listeners for title screen buttons
         startButton.clicked += StartGame;
+        aboutButton.clicked += delegate { ToggleAbout(true); };
         creditsButton.clicked += delegate { ToggleCredits(true); };
-        returnToMenuButton.clicked += delegate { ToggleCredits(false); };
+        aboutReturnToMenuButton.clicked += delegate { ToggleAbout(false); };
+        creditsReturnToMenuButton.clicked += delegate { ToggleCredits(false); };
 
         InputManager.Instance.anyButtonEvent.AddListener(SelectMenuItem);
 
-        // Create list for title and credits screen buttons (for navigation)
+        // Create list for title, about and credits screen buttons (for navigation)
         titleScreenButtons.Add(startButton);
+        titleScreenButtons.Add(aboutButton);
         titleScreenButtons.Add(creditsButton);
 
-        creditsScreenButtons.Add(returnToMenuButton);
+        aboutScreenButtons.Add(aboutReturnToMenuButton);
+
+        creditsScreenButtons.Add(creditsReturnToMenuButton);
 
         // Select first button in start screen
         startButton.Focus();
@@ -449,6 +471,20 @@ public class UserInterfaceController : MonoBehaviour
         EnqueueDialogue("Off you go!");
     }
 
+    public void ToggleAbout(bool show)
+    {
+        if (show)
+        {
+            aboutScreen.style.display = DisplayStyle.Flex;
+            aboutScreenButtons[aboutScreenButtonsIndex].Focus();
+        }
+        else
+        {
+            aboutScreen.style.display = DisplayStyle.None;
+            aboutScreenButtons[aboutScreenButtonsIndex].Focus();
+        }
+    }
+
     public void ToggleCredits(bool show)
     {
         if (show)
@@ -474,6 +510,14 @@ public class UserInterfaceController : MonoBehaviour
             titleScreenButtons[titleScreenButtonsIndex].Focus();
 
         }
+        else if (aboutVisible)
+        {
+            aboutScreenButtonsIndex++;
+            if (aboutScreenButtonsIndex >= aboutScreenButtons.Count) aboutScreenButtonsIndex = 0;
+
+            // Select next button
+            aboutScreenButtons[aboutScreenButtonsIndex].Focus();
+        }
         else if (creditsVisible)
         {
             creditsScreenButtonsIndex++;
@@ -495,6 +539,14 @@ public class UserInterfaceController : MonoBehaviour
             titleScreenButtons[titleScreenButtonsIndex].Focus();
 
         }
+        else if (aboutVisible)
+        {
+            aboutScreenButtonsIndex--;
+            if (aboutScreenButtonsIndex < 0) aboutScreenButtonsIndex = aboutScreenButtons.Count - 1;
+
+            // Select next button
+            aboutScreenButtons[aboutScreenButtonsIndex].Focus();
+        }
         else if (creditsVisible)
         {
             creditsScreenButtonsIndex--;
@@ -511,6 +563,10 @@ public class UserInterfaceController : MonoBehaviour
         {
             titleScreenButtons[titleScreenButtonsIndex].HandleEvent(new MouseDownEvent());
 
+        }
+        else if (aboutVisible)
+        {
+            aboutScreenButtons[aboutScreenButtonsIndex].HandleEvent(new MouseDownEvent());
         }
         else if (creditsVisible)
         {

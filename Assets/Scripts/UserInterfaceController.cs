@@ -45,10 +45,12 @@ public class UserInterfaceController : MonoBehaviour
     private Queue<string> dialogueQueue;
 
     public VisualElement recipeScreen;
-    public GroupBox recipeVisual;
-    public Label recipeText;
+    public VisualElement recipeVisual;
+    public VisualElement recipeDialogBox;
+    public Label recipeText1;
+    public Label recipeText2;
     //           Tuple<textString,elementIdString>
-    public Queue<Tuple<string,string>> recipeQueue;
+    public Queue<Tuple<string,string,string>> recipeQueue;
     public bool recipeSequenceStarted = false;
 
     public bool PlayerApproachedDoorWithAllIngredients = false;
@@ -170,8 +172,10 @@ public class UserInterfaceController : MonoBehaviour
         dialogueText = dialogueScreen.Query<Label>("dialogue-text").First();
 
         recipeScreen = root.Query<VisualElement>("recipe-screen").First();
-        recipeVisual = recipeScreen.Query<GroupBox>("recipe-visual").First();
-        recipeText = recipeScreen.Query<Label>("recipe-text").First();
+        recipeVisual = recipeScreen.Query<VisualElement>("recipe-visual").First();
+        recipeDialogBox = recipeScreen.Query<VisualElement>("dialogue-box").First();
+        recipeText1 = recipeScreen.Query<Label>("dialogue-text-akwi").First();
+        recipeText2 = recipeScreen.Query<Label>("dialogue-text-tota").First();
         recipeScreen.style.display = DisplayStyle.None;
 
         recipeQueue = new();
@@ -410,6 +414,7 @@ public class UserInterfaceController : MonoBehaviour
             if (playerHasAllIngredients()) {
                 ClearAndEnqueueDialogue("Let's see what you brought me...");
                 EnqueueDialogue($"You found all ingredients AND strawberries! You get to learn how to make soup AND juice!");
+                OnAllIngredientsRetrieved();
                 return;
             }
             if (playerHasAllIngredientsExceptStrawberries()) {
@@ -439,9 +444,10 @@ public class UserInterfaceController : MonoBehaviour
                 return;
             }
             if(playerHasNothing()) {
-                ClearAndEnqueueDialogue("Let's see what you brought me...");
-                EnqueueDialogue($"You didn't pick anything!");
-                EnqueueDialogue($"Don't be lazy like your brother! Go\ngrab what we need for our soup!\nHurry!");
+                // ClearAndEnqueueDialogue("Let's see what you brought me...");
+                // EnqueueDialogue($"You didn't pick anything!");
+                // EnqueueDialogue($"Don't be lazy like your brother! Go\ngrab what we need for our soup!\nHurry!");
+                OnAllIngredientsRetrieved();
                 return;
             }
         }
@@ -577,13 +583,13 @@ public class UserInterfaceController : MonoBehaviour
     public void OnAllIngredientsRetrieved() {
         recipeSequenceStarted = true;
         recipeScreen.style.display = DisplayStyle.Flex;
-        ClearRecipes();
-        EnqueueRecipe(new Tuple<string,string>("Now we make the corn soup...","recipe-part-1"));
-        EnqueueRecipe(new Tuple<string,string>("Watch carefully...","recipe-part-2"));
+        ClearAndEnqueueRecipe(new Tuple<string,string,string>("dialog-only","tota","You have found all of the ingredients!"));
+        EnqueueRecipe(new Tuple<string,string,string>("recipe-1","tota","Here is the page for corn soup from the recipe book."));
+        EnqueueRecipe(new Tuple<string,string,string>("recipe-2","akwi","First we take the dry corn."));
     }
 
     private void AdvanceDialogue() {
-        Debug.Log("Advancing Dialogue");
+        // Debug.Log("Advancing Dialogue");
         string dialogue;
         dialogueQueue.TryDequeue(out dialogue);
         if (dialogueQueue.Count > 0) {
@@ -618,25 +624,70 @@ public class UserInterfaceController : MonoBehaviour
         EnqueueDialogue(dialogue);
     }
 
-    private void EnqueueRecipe(Tuple<string, string> recipe) {
+    private void EnqueueRecipe(Tuple<string, string, string> recipe) {
+        Debug.Log("Enqueue Recipe");
         recipeQueue.Enqueue(recipe);
+
+        pickScreen.style.display = DisplayStyle.None;
+        dialogueScreen.style.display = DisplayStyle.None;
+        recipeScreen.style.display = DisplayStyle.Flex;
+        Tuple<string,string,string> peekValue = recipeQueue.Peek();
+        recipeText1.text = peekValue.Item3;
+        recipeText2.text = peekValue.Item3;
+
+        foreach(VisualElement element in recipeDialogBox?.Children()) {
+            if (element.name == peekValue.Item2) {
+                element.style.display = DisplayStyle.Flex;
+            }
+            else {
+                element.style.display = DisplayStyle.None;
+            }
+        }
+
+
+        foreach(VisualElement element in recipeVisual?.Children()) {
+            if (element.name == peekValue.Item1) {
+                element.style.display = DisplayStyle.Flex;
+            }
+            else {
+                element.style.display = DisplayStyle.None;
+            }
+        }
 
         PlayerMovement.Instance.ToggleMovement(false);
     }
 
+    private void ClearAndEnqueueRecipe(Tuple<string, string, string> recipe) {
+        recipeQueue.Clear();
+        EnqueueRecipe(recipe);
+    }
+
     private void AdvanceRecipe() {
-        Tuple<string,string> recipe;
+        // Debug.Log("Advancing Recipe");
+        Tuple<string,string,string> recipe;
         recipeQueue.TryDequeue(out recipe);
 
         if (recipeQueue.Count > 0) {
             pickScreen.style.display = DisplayStyle.None;
             dialogueScreen.style.display = DisplayStyle.None;
             recipeScreen.style.display = DisplayStyle.Flex;
-            Tuple<string,string> peekValue = recipeQueue.Peek();
-            recipeText.text = peekValue.Item1;
+            Tuple<string,string,string> peekValue = recipeQueue.Peek();
+            recipeText1.text = peekValue.Item3;
+            recipeText2.text = peekValue.Item3;
 
             foreach(VisualElement element in recipeVisual?.Children()) {
+                if (element.name == peekValue.Item1) {
+                    Debug.Log("Visual found: " + element.name);
+                    element.style.display = DisplayStyle.Flex;
+                }
+                else {
+                    element.style.display = DisplayStyle.None;
+                }
+            }
+
+            foreach(VisualElement element in recipeDialogBox?.Children()) {
                 if (element.name == peekValue.Item2) {
+                    Debug.Log("Dialog owner found: " + element.name);
                     element.style.display = DisplayStyle.Flex;
                 }
                 else {
@@ -649,6 +700,7 @@ public class UserInterfaceController : MonoBehaviour
             if (recipeSequenceStarted) {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 PlayerMovement.Instance.ToggleMovement(false);
+                Debug.Log("Game Reset");
             }
         }
 

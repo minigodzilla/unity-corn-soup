@@ -9,6 +9,7 @@ using UnityEngine.Events;
 
 public class InputManager : MonoBehaviour
 {
+    public UnityEvent resetEvent;
     public UnityEvent clickEvent;
     public UnityEvent anyButtonEvent;
 
@@ -26,6 +27,7 @@ public class InputManager : MonoBehaviour
     }
 
 #if ENABLE_INPUT_SYSTEM
+    InputAction reset;
     InputAction click;
     InputAction anyButton;
     InputAction up;
@@ -35,32 +37,35 @@ public class InputManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        reset = new InputAction("Reset", binding: "<Joystick>/button8");
+        reset.performed += Reset;
+        
+        reset.Enable();
+
         click = new InputAction("Pick", binding: "<Joystick>/button3");
         click.AddBinding("<Mouse>/leftButton");
         click.performed += Click;
         
         click.Enable();
 
-        anyButton = new InputAction("AnyButton", binding: "<Joystick>/button2");
+        anyButton = new InputAction("AnyButton", binding: "<Joystick>/button1");
+        anyButton.AddBinding("<Joystick>/button2");
         anyButton.AddBinding("<Joystick>/button3");
         anyButton.AddBinding("<Joystick>/button4");
         anyButton.AddBinding("<Joystick>/button5");
         anyButton.AddBinding("<Joystick>/button6");
         anyButton.AddBinding("<Joystick>/button7");
-        anyButton.AddBinding("<Joystick>/button8");
-        anyButton.AddBinding("<Joystick>/button9");
-        anyButton.AddBinding("<Joystick>/button10");
-        anyButton.AddBinding("<Joystick>/button11");
-        anyButton.AddBinding("<Joystick>/button12");
         anyButton.AddBinding("<Mouse>/leftButton");
-        anyButton.AddBinding("<Gamepad>/rightTrigger");
-        anyButton.AddBinding("<Gamepad>/leftTrigger");
-        anyButton.AddBinding("<Gamepad>/button*");
+        anyButton.AddBinding("<Mouse>/rightButton");
+        // anyButton.AddBinding("<Gamepad>/button*");
         anyButton.performed += AnyButton;
         
         anyButton.Enable();
     }
 #endif
+    public void Reset(InputAction.CallbackContext context) {
+        resetEvent.Invoke();
+    }
     public void Click(InputAction.CallbackContext context) {
         clickEvent.Invoke();
     }

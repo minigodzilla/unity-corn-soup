@@ -185,6 +185,8 @@ public class UserInterfaceController : MonoBehaviour
         recipeQueue = new();
         dialogueQueue = new();
 
+        InputManager.Instance.resetEvent.AddListener(ResetGame);
+
         InputManager.Instance.anyButtonEvent.AddListener(AdvanceDialogue);
         InputManager.Instance.anyButtonEvent.AddListener(AdvanceRecipe);
         InputManager.Instance.anyButtonEvent.AddListener(ResetTimer);
@@ -612,8 +614,10 @@ public class UserInterfaceController : MonoBehaviour
         recipeSequenceStarted = true;
         recipeScreen.style.display = DisplayStyle.Flex;
         ClearAndEnqueueRecipe(new Tuple<string,string,string>("dialog-only","tota","You have found all of the ingredients!"));
-        EnqueueRecipe(new Tuple<string,string,string>("recipe-1","tota","Here is the page for corn soup from the recipe book."));
-        EnqueueRecipe(new Tuple<string,string,string>("recipe-2","akwi","First we take the dry corn."));
+        EnqueueRecipe(new Tuple<string,string,string>("recipe-1","tota","Here's the page with the recipe!"));
+        EnqueueRecipe(new Tuple<string,string,string>("recipe-2","akwi","Is this what the ash is used for?"));
+        EnqueueRecipe(new Tuple<string,string,string>("recipe-2","tota","That's right! An old trick passed down from the generations."));
+        EnqueueRecipe(new Tuple<string,string,string>("recipe-2","tota","The ash softens the corn."));
     }
 
     private void AdvanceDialogue() {

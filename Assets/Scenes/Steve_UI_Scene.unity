@@ -4094,26 +4094,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa29838d32bd044b8bc751b95dbe8df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetEvent:
+    m_PersistentCalls:
+      m_Calls: []
   clickEvent:
     m_PersistentCalls:
       m_Calls: []
   anyButtonEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &808316629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 808316617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 207f5b6d5fae8dc4ba9692734056cbef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeRemaining: 10
-  timerIsRunning: 0
 --- !u!1001 &831624752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7065,6 +7054,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca1d50202f653340a7eb22f23b92648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeBeforeReset: 60
+  timeRemaining: 10
+  timerIsRunning: 0
   uiDocument: {fileID: 1306764724}
   recipeSequenceStarted: 0
   PlayerApproachedDoorWithAllIngredients: 1

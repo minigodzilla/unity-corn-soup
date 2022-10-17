@@ -11,6 +11,10 @@ public class UserInterfaceController : MonoBehaviour
 
     public static UserInterfaceController Instance { get; private set; }
 
+    public float timeBeforeReset = 60;
+    public float timeRemaining = 60;
+    public bool timerIsRunning = false;
+
     public Dictionary<Collectable.IngredientType,Dictionary<string,string>> ingredientDict;
 
     public UIDocument uiDocument;
@@ -183,6 +187,7 @@ public class UserInterfaceController : MonoBehaviour
 
         InputManager.Instance.anyButtonEvent.AddListener(AdvanceDialogue);
         InputManager.Instance.anyButtonEvent.AddListener(AdvanceRecipe);
+        InputManager.Instance.anyButtonEvent.AddListener(ResetTimer);
 
         titleScreen.style.display = DisplayStyle.Flex;
         aboutScreen.style.display = DisplayStyle.None;
@@ -210,9 +215,32 @@ public class UserInterfaceController : MonoBehaviour
         startButton.Focus();
     }
 
+    void Start() {
+        // Starts the timer automatically
+        timerIsRunning = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
+
+        // timer handling
+
+        if (timerIsRunning && !Input.anyKeyDown)
+        {
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+            }
+            else
+            {
+                Debug.Log("Time has run out!");
+                timeRemaining = timeBeforeReset;
+                timerIsRunning = false;
+                ResetGame();
+            }
+        }
+
         // HUD Handling
 
         if (PlayerManager.Instance.IngredientCount(Collectable.IngredientType.freshCorn) == 0) {
@@ -698,9 +726,7 @@ public class UserInterfaceController : MonoBehaviour
         }
         else {
             if (recipeSequenceStarted) {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                PlayerMovement.Instance.ToggleMovement(false);
-                Debug.Log("Game Reset");
+                ResetGame();
             }
         }
 
@@ -708,5 +734,15 @@ public class UserInterfaceController : MonoBehaviour
 
     private void ClearRecipes() {
         recipeQueue.Clear();
+    }
+    private void ResetTimer() {
+        Debug.Log("Resetting Timer");
+        timeRemaining = timeBeforeReset;
+    }
+
+    private void ResetGame() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PlayerMovement.Instance.ToggleMovement(false);
+        Debug.Log("Resetting Game");
     }
 }

@@ -1,3 +1,4 @@
+.DS_Store
 #NOTE: put this inside the unity project folder, not the folder above
 # This .gitignore file should be placed at the root of your Unity project directory
 #

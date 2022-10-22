@@ -474,10 +474,10 @@ public class UserInterfaceController : MonoBehaviour
                 return;
             }
             if(playerHasNothing()) {
-                // ClearAndEnqueueDialogue("Let's see what you brought me...");
-                // EnqueueDialogue($"You didn't pick anything!");
-                // EnqueueDialogue($"Don't be lazy like your brother! Go\ngrab what we need for our soup!\nHurry!");
-                OnAllIngredientsRetrieved();
+                ClearAndEnqueueDialogue("Let's see what you brought me...");
+                EnqueueDialogue($"You didn't pick anything!");
+                EnqueueDialogue($"Don't be lazy like your brother! Go\ngrab what we need for our soup!\nHurry!");
+                // OnAllIngredientsRetrieved();
                 return;
             }
         }
@@ -616,8 +616,8 @@ public class UserInterfaceController : MonoBehaviour
         ClearAndEnqueueRecipe(new Tuple<string,string,string>("dialog-only","tota","You have found all of the ingredients!"));
         EnqueueRecipe(new Tuple<string,string,string>("recipe-1","tota","Here's the page with the recipe!"));
         EnqueueRecipe(new Tuple<string,string,string>("recipe-2","akwi","Is this what the ash is used for?"));
-        EnqueueRecipe(new Tuple<string,string,string>("recipe-2","tota","That's right! An old trick passed down from the generations."));
-        EnqueueRecipe(new Tuple<string,string,string>("recipe-2","tota","The ash softens the corn."));
+        EnqueueRecipe(new Tuple<string,string,string>("recipe-2","tota","That's right! It's an old trick passed down from the generations."));
+        EnqueueRecipe(new Tuple<string,string,string>("recipe-2","tota","The ash softens the corn and makes it taste so much better!"));
     }
 
     private void AdvanceDialogue() {

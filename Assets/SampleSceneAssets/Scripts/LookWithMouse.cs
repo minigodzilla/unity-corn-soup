@@ -41,7 +41,7 @@ public class LookWithMouse : MonoBehaviour
         }
         if (Joystick.current != null)
         {
-            var value = Joystick.current.stick.ReadValue() * 4;
+            var value = Joystick.current.stick.ReadValue() * 1;
             mouseX += value.x;
             mouseY += -value.y;
         }

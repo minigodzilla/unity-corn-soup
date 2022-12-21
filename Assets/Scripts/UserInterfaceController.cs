@@ -218,8 +218,8 @@ public class UserInterfaceController : MonoBehaviour
     }
 
     void Start() {
-        // Starts the timer automatically
-        timerIsRunning = true;
+        // if true: Starts the timer automatically
+        timerIsRunning = false;
     }
 
     // Update is called once per frame

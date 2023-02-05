@@ -116,17 +116,17 @@ public class UserInterfaceController : MonoBehaviour
 
         Dictionary<string,string> freshBeansNames = new();
         freshBeansNames["en"] = "String beans";
-        freshBeansNames["mo"] = "O’rhótsheri";
+        freshBeansNames["mo"] = "O'rhótsheri";
         ingredientDict.Add(Collectable.IngredientType.freshBeans, freshBeansNames);
 
         Dictionary<string,string> driedBeansNames = new();
         driedBeansNames["en"] = "Dry beans (for soup)";
-        driedBeansNames["mo"] = "Onon’tara osahe:ta";
+        driedBeansNames["mo"] = "Onòn:tara oshahè:ta";
         ingredientDict.Add(Collectable.IngredientType.driedBeans, driedBeansNames);
 
         Dictionary<string,string> ashNames = new();
         ashNames["en"] = "Ashes";
-        ashNames["mo"] = "O’kèn:ra";
+        ashNames["mo"] = "Tio'tekha o'kèn:ra";
         ingredientDict.Add(Collectable.IngredientType.ash, ashNames);
 
         Dictionary<string,string> strawberryNames = new();
@@ -136,12 +136,12 @@ public class UserInterfaceController : MonoBehaviour
 
         Dictionary<string,string> venisonNames = new();
         venisonNames["en"] = "Pork";
-        venisonNames["mo"] = "Kwéskwes o’wá:ron";
+        venisonNames["mo"] = "Kwéskwes oshí:na";
         ingredientDict.Add(Collectable.IngredientType.venison, venisonNames);
 
         Dictionary<string,string> recipeBookNames = new();
         recipeBookNames["en"] = "Recipe book";
-        recipeBookNames["mo"] = "Kahiatón’sera ...";
+        recipeBookNames["mo"] = "Iekhoniatha kahiatón'sera";
         ingredientDict.Add(Collectable.IngredientType.recipeBook, recipeBookNames);
 
         uiDocument = GetComponent<UIDocument>();
